@@ -1,0 +1,45 @@
+---
+layout: base.njk
+permalink: '/servicos.html'
+title: 'Serviços'
+description: 'Ajudo organizações a tornarem seus produtos digitais, processos e cultura mais acessíveis e usáveis.'
+---
+
+{% from "partials/service-card.njk" import serviceCard %}
+
+<section class="page-content">
+  <div class="mx-auto px-8 max-w-7xl">
+    <h1 class="text-blood-red-950">{{ title }}</h1>
+    <p class="lead">
+      {{ description }}
+    </p>
+
+    {% for section in services.sections %}
+    <section>
+      <div class="flex items-center gap-4 my-10">
+        <h2 class="font-bold text-blood-red-950 text-2xl uppercase tracking-widest">{{ section.title }}</h2>
+      </div>
+
+      <div class="gap-6 grid md:grid-cols-3">
+        {% for service in section.services %}
+          {{ serviceCard(service) }}
+        {% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="bg-light-silver-100 py-24">
+  <div class="flex md:flex-row flex-col justify-between items-center gap-12 mx-auto px-8 max-w-7xl">
+    <div class="max-w-2xl">
+      <h2 class="mb-4 font-black text-blood-red-950 text-4xl">Pronto para tornar seu projeto acessível?</h2>
+      <p class="text-secondary text-lg">Vamos conversar sobre como aplicar as melhores práticas de inclusão no seu
+        produto digital.</p>
+    </div>
+    <a href="/contato"
+      class="bg-blood-red-950 px-12 py-5 rounded font-bold text-on-primary text-white text-lg hover:scale-[1.02] active:scale-95 transition-all">
+      Iniciar Consultoria
+    </a>
+  </div>
+</section>

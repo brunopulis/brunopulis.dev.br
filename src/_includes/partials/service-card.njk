@@ -1,0 +1,17 @@
+{% macro serviceCard(service) %}
+<article class="group bg-light-silver-100 hover:bg-transparent p-8 border border-brand-primary transition-all cursor-default">
+  <svg height="1em" width="1em" aria-hidden="true" data-icon="{{ service.icon }}" class="mb-6 size-8 text-blood-red-950" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    {{ service.icon | icon | safe }}
+  </svg>
+  <div class="content">
+    <h3 class="mb-2 font-bold text-blood-red-950 h6 heading">
+      <a href="{{ service.url }}" class="underline underline-offset-4 hover:no-underline">
+        {{ service.title }}
+      </a>
+    </h3>
+    <p class="mb-6 text-errie-black-900 text-sm leading-relaxed">
+      {{ service.description }}
+    </p>
+  </div>
+</article>
+{% endmacro %}

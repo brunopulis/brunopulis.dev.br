@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bruno Pulis</title>
+  <meta name="description" content="Engenheiro de acessibilidade digital" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/assets/css/index.css" />
+</head>
+<body>
+  <div class="z-[51] relative flex justify-center items-center gap-2 bg-errie-black-900 px-4 py-1.5 border-wash/20 border-b w-full">
+    <p class="font-medium text-white text-xs">
+      Este site está com redesign aberto, se algo estranho acontecer é por isso.
+    </p>
+  </div>
+  {% include "partials/header.njk" %}
+  <main id="main-content">
+    {{ content | safe }}
+  </main>
+  {% include "partials/footer.njk" %}
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+@import 'tailwindcss';
+
+@theme {
+  --dark-mode: class;
+
+  --color-blood-red-50: #fff1f1;
+  --color-blood-red-100: #ffdfdf;
+  --color-blood-red-200: #ffc4c4;
+  --color-blood-red-300: #ff9b9b;
+  --color-blood-red-400: #ff6161;
+  --color-blood-red-500: #ff3030;
+  --color-blood-red-600: #f11111;
+  --color-blood-red-700: #cb0a0a;
+  --color-blood-red-800: #a80c0c;
+  --color-blood-red-900: #8a1212;
+  --color-blood-red-950: #610404;
+
+  --color-vista-blue-50: #f1f6fc;
+  --color-vista-blue-100: #e5effa;
+  --color-vista-blue-200: #d0e1f5;
+  --color-vista-blue-300: #b4cced;
+  --color-vista-blue-400: #96b1e3;
+  --color-vista-blue-500: #849cdb;
+  --color-vista-blue-600: #6176ca;
+  --color-vista-blue-700: #5162b1;
+  --color-vista-blue-800: #44538f;
+  --color-vista-blue-900: #3c4873;
+  --color-vista-blue-950: #232943;
+
+  --color-errie-black-50: #fafafa;
+  --color-errie-black-100: #f3f6f6;
+  --color-errie-black-200: #e2e9e9;
+  --color-errie-black-300: #d2dada;
+  --color-errie-black-400: #9bb0b0;
+  --color-errie-black-500: #6b8080;
+  --color-errie-black-600: #4c6161;
+  --color-errie-black-700: #3b4a4a;
+  --color-errie-black-800: #252c2c;
+  --color-errie-black-900: #171e1e;
+  --color-errie-black-950: #080c0c;
+
+  --color-light-silver-50: #fafafa;
+  --color-light-silver-100: #f5f5f5;
+  --color-light-silver-200: #e6e6e6;
+  --color-light-silver-300: #d9d9d9;
+  --color-light-silver-400: #a3a3a3;
+  --color-light-silver-500: #727272;
+  --color-light-silver-600: #535353;
+  --color-light-silver-700: #404040;
+  --color-light-silver-800: #272727;
+  --color-light-silver-900: #1a1a1a;
+  --color-light-silver-950: #0b0b0b;
+
+  --width-prose: 64ch;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--color-errie-black-800);
+    margin: 0;
+  }
+}
+
+.header {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-light-silver-300);
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-weight: bold;
+  color: var(--color-blood-red-950);
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  color: var(--color-errie-black-800);
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+.nav-links a:hover {
+  color: var(--color-blood-red-500);
+}
+
+.hero {
+  padding: 4rem 0;
+  background: var(--color-light-silver-100);
+}
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--color-errie-black-800);
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.125rem;
+  color: #555;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+.btn-primary {
+  background: var(--color-blood-red-500);
+  color: white;
+}
+.btn-outline {
+  border: 2px solid var(--color-blood-red-500);
+  color: var(--color-blood-red-500);
+  background: transparent;
+}
+
+.page-content {
+  padding: 3rem 0;
+}
+.page-content h1 {
+  font-size: 2.5rem;
+  color: var(--color-errie-black-800);
+  margin-bottom: 1rem;
+}
+.page-content h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.page-content p {
+  margin-bottom: 1rem;
+  max-width: 65ch;
+}
+.page-content ul {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+.page-content li {
+  margin-bottom: 0.5rem;
+}
+.lead {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+.services-grid,
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.service-card,
+.project-card,
+.talk-card {
+  border: 1px solid var(--color-light-silver-300);
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+.service-card h2,
+.project-card h2,
+.talk-card h2 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.service-card p,
+.project-card p,
+.talk-card p {
+  margin-bottom: 1rem;
+}
+.btn-link {
+  color: var(--color-blood-red-500);
+  text-decoration: none;
+  font-weight: 500;
+}
+.talk-type {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--color-vista-blue-600);
+  margin-bottom: 0.5rem;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 2rem 0;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--color-light-silver-300);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: 2px solid var(--color-blood-red-500);
+  border-color: var(--color-blood-red-500);
+}
+.contact-info {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-light-silver-300);
+}
+
+.footer {
+  padding: 2rem 0;
+  border-top: 1px solid var(--color-light-silver-300);
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #666;
+}

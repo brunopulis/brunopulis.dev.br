@@ -1,0 +1,23 @@
+{
+  "name": "Bruno Pulis",
+  "seo": {
+    "title": "Bruno Pulis",
+    "description": "Engenheiro de acessibilidade digital",
+    "author": "Bruno Pulis"
+  },
+  "colors": {
+    "primary": "#610404",
+    "secondary": "#849CDB", 
+    "neutral": "#171E1E",
+    "outline": "#D9D9D9"
+  },
+  "navigation": {
+    "items": [
+      { "label": "Serviços", "href": "/servicos" },
+      { "label": "Sobre", "href": "/sobre" },
+      { "label": "Portfolio", "href": "/portfolio" },
+      { "label": "Palestras", "href": "/palestras" },
+      { "label": "Contato", "href": "/contato" }
+    ]
+  }
+}
