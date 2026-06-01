@@ -249,5 +249,15 @@
   margin-top: 2rem;
   text-align: center;
   font-size: 0.875rem;
-  color: #666;
+}
+
+.footer__link {
+  @apply focus:outline-none focus:ring-[#849CDB] focus:ring-2 font-sans text-white text-xs underline underline-offset-4 hover:no-underline tracking-widest;
+}
+
+.footer__link:focus-visible {
+  padding: 0.5rem;
+  background: #fff;
+  text-decoration: none;
+  color: var(--color-errie-black-900);
 }

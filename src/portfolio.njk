@@ -1,65 +1,36 @@
 ---
-permalink: /portfolio.html
+layout: base.njk
+permalink: '/portfolio.html'
+title: 'Portfolio'
+description: 'Projetos de desenvolvimento acessível, consultoria e implementação de interfaces inclusivas.'
 ---
 
-<!DOCTYPE html>
-<html lang="pt-br" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Bruno Pulis</title>
-    <meta name="description" content="Projetos de desenvolvimento acessível" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="/assets/css/index.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <a href="/" class="logo">Bruno Pulis</a>
-        <nav aria-label="Navegação principal">
-          <ul class="nav-links">
-            <li><a href="/servicos">Serviços</a></li>
-            <li><a href="/sobre">Sobre</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
-            <li><a href="/palestras">Palestras</a></li>
-            <li><a href="/contato">Contato</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main id="main-content">
-      <section class="page-content">
-        <div class="container">
-          <h1>Portfolio</h1>
-          <p class="lead">Projetos de desenvolvimento acessível, consultoria e implementação de interfaces inclusivas.</p>
-          
-          <div class="portfolio-grid">
-            <article class="project-card">
-              <div class="project-image"></div>
-              <h2>Projeto 01</h2>
-              <p>Descrição do projeto.</p>
-              <a href="#" class="btn-link">Ver projeto →</a>
-            </article>
-            <article class="project-card">
-              <div class="project-image"></div>
-              <h2>Projeto 02</h2>
-              <p>Descrição do projeto.</p>
-              <a href="#" class="btn-link">Ver projeto →</a>
-            </article>
-            <article class="project-card">
-              <div class="project-image"></div>
-              <h2>Projeto 03</h2>
-              <p>Descrição do projeto.</p>
-              <a href="#" class="btn-link">Ver projeto →</a>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2024 - Bruno Pulis.</p>
-      </div>
-    </footer>
-  </body>
-</html>
+<section class="page-content">
+  <div class="mx-auto px-8 max-w-7xl">
+    <h1 class="font-bold text-blood-red-950">{{ title }}</h1>
+    <p class="lead">
+      {{ description }}
+    </p>
+
+    <div class="portfolio-grid">
+      <article class="bg-light-silver-100 project-card">
+        <div class="project-image"></div>
+        <h2>Projeto 01</h2>
+        <p>Descrição do projeto.</p>
+        <a href="#" class="btn-link">Ver projeto →</a>
+      </article>
+      <article class="bg-light-silver-100 project-card">
+        <div class="project-image"></div>
+        <h2>Projeto 02</h2>
+        <p>Descrição do projeto.</p>
+        <a href="#" class="btn-link">Ver projeto →</a>
+      </article>
+      <article class="bg-light-silver-100 project-card">
+        <div class="project-image"></div>
+        <h2>Projeto 03</h2>
+        <p>Descrição do projeto.</p>
+        <a href="#" class="btn-link">Ver projeto →</a>
+      </article>
+    </div>
+  </div>
+</section>

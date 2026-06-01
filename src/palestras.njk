@@ -1,65 +1,36 @@
 ---
-permalink: /palestras.html
+layout: base.njk
+permalink: '/palestras.html'
+title: 'Palestras'
+description: 'Palestras e apresentações sobre acessibilidade digital, design inclusivo e desenvolvimento web acessível.'
 ---
 
-<!DOCTYPE html>
-<html lang="pt-br" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Palestras - Bruno Pulis</title>
-    <meta name="description" content="Palestras sobre acessibilidade digital" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="/assets/css/index.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <a href="/" class="logo">Bruno Pulis</a>
-        <nav aria-label="Navegação principal">
-          <ul class="nav-links">
-            <li><a href="/servicos">Serviços</a></li>
-            <li><a href="/sobre">Sobre</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
-            <li><a href="/palestras">Palestras</a></li>
-            <li><a href="/contato">Contato</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main id="main-content">
-      <section class="page-content">
-        <div class="container">
-          <h1>Palestras</h1>
-          <p class="lead">Palestras e apresentações sobre acessibilidade digital, design inclusivo e desenvolvimento web acessível.</p>
-          
-          <div class="talks-list">
-            <article class="talk-card">
-              <span class="talk-type">Keynote</span>
-              <h2>Semantic HTML: O Básico que Funciona</h2>
-              <p>Uma masterclass sobre HTML semântico e sua importância para a acessibilidade.</p>
-              <a href="#" class="btn-link">Ver slides →</a>
-            </article>
-            <article class="talk-card">
-              <span class="talk-type">Talk</span>
-              <h2>Acessibilidade Além do Leitor de Tela</h2>
-              <p>Entendendo que acessibilidade vai muito além da deficiência visual.</p>
-              <a href="#" class="btn-link">Ver slides →</a>
-            </article>
-            <article class="talk-card">
-              <span class="talk-type">Workshop</span>
-              <h2>WCAG 2.2 na Prática</h2>
-              <p>Workshop prático sobre implementação do WCAG 2.2 AA.</p>
-              <a href="#" class="btn-link">Ver slides →</a>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2024 - Bruno Pulis.</p>
-      </div>
-    </footer>
-  </body>
-</html>
+<section class="page-content">
+  <div class="mx-auto px-8 max-w-7xl">
+    <h1>{{ title }}</h1>
+    <p class="lead">
+      {{ description }}
+    </p>
+
+    <div class="talks-list">
+      <article class="mb-4 talk-card">
+        <span class="talk-type">Keynote</span>
+        <h2>Semantic HTML: O Básico que Funciona</h2>
+        <p>Uma masterclass sobre HTML semântico e sua importância para a acessibilidade.</p>
+        <a href="#" class="btn-link">Ver slides →</a>
+      </article>
+      <article class="mb-4 talk-card">
+        <span class="talk-type">Talk</span>
+        <h2>Acessibilidade Além do Leitor de Tela</h2>
+        <p>Entendendo que acessibilidade vai muito além da deficiência visual.</p>
+        <a href="#" class="btn-link">Ver slides →</a>
+      </article>
+      <article class="mb-4 talk-card">
+        <span class="talk-type">Workshop</span>
+        <h2>WCAG 2.2 na Prática</h2>
+        <p>Workshop prático sobre implementação do WCAG 2.2 AA.</p>
+        <a href="#" class="btn-link">Ver slides →</a>
+      </article>
+    </div>
+  </div>
+</section>

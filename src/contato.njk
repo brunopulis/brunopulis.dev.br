@@ -1,66 +1,40 @@
 ---
-permalink: /contato.html
+layout: base.njk
+permalink: '/contato.html'
+title: 'Contato'
+description: 'Estou disponível para projetos de consultoria, auditoria e desenvolvimento acessível.'
 ---
 
-<!DOCTYPE html>
-<html lang="pt-br" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contato - Bruno Pulis</title>
-    <meta name="description" content="Entre em contato com Bruno Pulis" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="/assets/css/index.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <a href="/" class="logo">Bruno Pulis</a>
-        <nav aria-label="Navegação principal">
-          <ul class="nav-links">
-            <li><a href="/servicos">Serviços</a></li>
-            <li><a href="/sobre">Sobre</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
-            <li><a href="/palestras">Palestras</a></li>
-            <li><a href="/contato">Contato</a></li>
-          </ul>
-        </nav>
+<section class="page-content">
+  <div class="mx-auto px-8 max-w-7xl">
+    <h1 class="font-bold text-blood-red-950">{{ title }}</h1>
+    <p class="lead">
+      {{ description }}
+    </p>
+
+    <form class="contact-form" name="contact" action="https://formspree.io/f/SEU_FORM_ID" method="post">
+      <div class="form-group">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" required />
       </div>
-    </header>
-    <main id="main-content">
-      <section class="page-content">
-        <div class="container">
-          <h1>Vamos conversar</h1>
-          <p class="lead">Estou disponível para projetos de consultoria, auditoria e desenvolvimento acessível.</p>
-          
-          <form class="contact-form" name="contact" action="https://formspree.io/f/SEU_FORM_ID" method="post">
-            <div class="form-group">
-              <label for="name">Nome</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="message">Mensagem</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar mensagem</button>
-          </form>
-          
-          <div class="contact-info">
-            <h2>Outras formas de contato</h2>
-            <p><strong>Email:</strong> hello@brunopulis.com</p>
-            <p><strong>Telefone:</strong> +55 (31) 97343-8008</p>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2024 - Bruno Pulis.</p>
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required />
       </div>
-    </footer>
-  </body>
-</html>
+      <div class="form-group">
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="bg-blood-red-950 p-4 font-bold text-white">Enviar mensagem</button>
+    </form>
+
+    <div class="contact-info">
+      <h2 class="font-bold text-blood-red-950">Outras formas de contato</h2>
+
+      <ul class="list-disc">
+        <li><strong>Email:</strong> <a href="mailto:hello@brunopulis.com" class="underline underline-offset-4 hover:no-underline">hello@brunopulis.com</a></li>
+        <li><strong>Telefone:</strong> <a href="tel:5531973438008" class="underline underline-offset-4 hover:no-underline">+55 (31) 97343-8008</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
