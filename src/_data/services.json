@@ -10,22 +10,22 @@
           "url": "/servicos/auditoria-rapida"
         },
         {
-          "title": "Auditoria Web completa",
-          "description": "Auditoria técnica completa baseada nas normas específicas (e-MAG para governo, WCAG 2.2 AA/AAA para privado).",
+          "title": "Auditoria Completa",
+          "description": "Auditoria técnica completa baseada nas normas específicas (WCAG 2.2 AA/AAA, ABNT 17225).",
           "icon": "trending-up",
-          "url": "/servicos/avaliacao-acessibilidade"
-        },
-        {
-          "title": "Auditoria de Aplicativos completa",
-          "description": "Descubra exatamente onde você está. Diagnóstico focado que revela oportunidades rápidas de melhoria para seu produto digital.",
-          "icon": "trending-up",
-          "url": "/servicos/avaliacao-acessibilidade"
+          "url": "/servicos/auditoria-completa"
         }
       ]
     },
     {
       "title": "Execução",
       "services": [
+        {
+          "title": "Remediação de documentos",
+          "description": "Transformação de PDFs, apresentações e materiais didáticos em formatos acessíveis (tagged PDF, EPUB).",
+          "icon": "file-text",
+          "url": "/servicos/remediacao-documentos"
+        },
         {
           "title": "Sites acessíveis",
           "description": "Implementação de componentes robustos com foco em semântica HTML e suporte a tecnologias assistivas.",
@@ -37,12 +37,6 @@
           "description": "Correção técnica de código para garantir semântica, ARIA e navegação por teclado.",
           "icon": "refresh-ccw-dot",
           "url": ""
-        },
-        {
-          "title": "Remediação de documentos",
-          "description": "Transformação de PDFs, apresentações e materiais didáticos em formatos acessíveis (tagged PDF, EPUB).",
-          "icon": "file-text",
-          "url": "/servicos/remediacao-documentos"
         }
       ]
     },
