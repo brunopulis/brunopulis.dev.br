@@ -3,6 +3,8 @@
 @theme {
   --dark-mode: class;
 
+  --color-white: #ffffff;
+
   --color-blood-red-50: #fff1f1;
   --color-blood-red-100: #ffdfdf;
   --color-blood-red-200: #ffc4c4;
@@ -68,9 +70,9 @@
 }
 
 .header {
-  padding: 1rem 0;
   border-bottom: 1px solid var(--color-light-silver-300);
 }
+
 .header .container {
   display: flex;
   justify-content: space-between;
@@ -92,13 +94,23 @@
   margin: 0;
   padding: 0;
 }
-.nav-links a {
+
+.nav__link {
+  padding: 0.5rem;
   color: var(--color-errie-black-800);
   text-decoration: none;
-  font-size: 0.875rem;
+  @apply font-bold text-lg underline underline-offset-4 hover:no-underline;
 }
+
+.nav__link:focus-visible {
+  padding: 0.5rem;
+  background: var(--color-blood-red-950);
+  text-decoration: none;
+  color: var(--color-white);
+}
+
 .nav-links a:hover {
-  color: var(--color-blood-red-500);
+  color: var(--color-blood-red-950);
 }
 
 .hero {
@@ -145,24 +157,29 @@
 .page-content {
   padding: 3rem 0;
 }
+
 .page-content h1 {
-  font-size: 2.5rem;
-  color: var(--color-errie-black-800);
+  color: var(--color-blood-red-950);
   margin-bottom: 1rem;
+  @apply font-bold text-5xl;
 }
+
 .page-content h2 {
   font-size: 1.5rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
+
 .page-content p {
   margin-bottom: 1rem;
   max-width: 65ch;
 }
+
 .page-content ul {
   margin-bottom: 1rem;
   padding-left: 1.5rem;
 }
+
 .page-content li {
   margin-bottom: 0.5rem;
 }
