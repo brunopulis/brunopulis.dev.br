@@ -2,39 +2,64 @@
 layout: base.njk
 permalink: '/contato.html'
 title: 'Contato'
-description: 'Estou disponível para projetos de consultoria, auditoria e desenvolvimento acessível.'
+description: 'Estou disponível para projetos de consultoria, auditoria e desenvolvimento acessível. Vamos conversar!'
 ---
 
 <section class="page-content">
   <div class="mx-auto px-8 max-w-7xl">
-    <h1 class="font-bold text-blood-red-950">{{ title }}</h1>
+    <h1 class="font-bold text-blood-red-950">
+      {{ title }}
+    </h1>
+
     <p class="lead">
       {{ description }}
     </p>
 
-    <form class="contact-form" name="contact" action="https://formspree.io/f/SEU_FORM_ID" method="post">
-      <div class="form-group">
-        <label for="name">Nome</label>
-        <input type="text" id="name" name="name" required />
-      </div>
-      <div class="form-group">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div class="form-group">
-        <label for="message">Mensagem</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
-      <button type="submit" class="bg-blood-red-950 p-4 font-bold text-white">Enviar mensagem</button>
-    </form>
+    <ul class="list-disc">
+      <li>
+        <a href="mailto:hello@brunopulis.com" class="text-xl underline underline-offset-4 hover:no-underline">
+          Mandar um e-mail
+        </a>
+      </li>
+      <li>
+        <a href="tel:5531973438008" class="text-xl underline underline-offset-4 hover:no-underline">
+          Falar no <span lang="en">WhatsApp</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://linkedin.com/in/pulis" rel="me noopener noreferrer" target="_blank" class="text-xl underline underline-offset-4 hover:no-underline">
+          LinkedIn
+        </a>
+      </li>
+      <li>
+        <a href="https://mastodon.social/@brunopulis" rel="me noopener noreferrer" target="_blank" class="text-xl underline underline-offset-4 hover:no-underline">
+          Mastodon
+        </a>
+      </li>
+      <li>
+        <a href="https://bsky.app/profile/brunopulis.com" rel="me noopener noreferrer" target="_blank" class="text-xl underline underline-offset-4 hover:no-underline">
+          Bluesky
+        </a>
+      </li>
+    </ul>
 
     <div class="contact-info">
-      <h2 class="font-bold text-blood-red-950">Outras formas de contato</h2>
+      <h2 class="font-bold text-blood-red-950">Quer bater um papo sobre acessibilidade?</h2>
 
+      <p>Marque um horário em:</p>
       <ul class="list-disc">
-        <li><strong>Email:</strong> <a href="mailto:hello@brunopulis.com" class="underline underline-offset-4 hover:no-underline">hello@brunopulis.com</a></li>
-        <li><strong>Telefone:</strong> <a href="tel:5531973438008" class="underline underline-offset-4 hover:no-underline">+55 (31) 97343-8008</a></li>
+        <li>
+          <a href="https://adplist.org/mentors/bruno-pulis" rel="me noopener noreferrer" target="_blank" class="text-xl underline underline-offset-4 hover:no-underline">
+            ADPList
+          </a>
+        </li>
+        <li>
+          <a href="https://cal.com/brunopulis/consultoria?overlayCalendar=true" rel="me noopener noreferrer" target="_blank" class="text-xl underline underline-offset-4 hover:no-underline">
+            Mentoria individual
+          </a>
+        </li>
       </ul>
+
     </div>
   </div>
 </section>
