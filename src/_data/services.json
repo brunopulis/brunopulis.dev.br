@@ -1,90 +1,46 @@
 {
   "sections": [
     {
-      "title": "Diagnóstico",
-      "services": [
-        {
-          "title": "Auditoria rápida",
-          "description": "Identificação ágil dos principais bloqueios de acessibilidade para correções imediatas de alto impacto.",
-          "icon": "fast-forward",
-          "url": "/servicos/auditoria-rapida"
-        },
-        {
-          "title": "Auditoria Completa",
-          "description": "Auditoria técnica completa baseada nas normas específicas (WCAG 2.2 AA/AAA, ABNT 17225).",
-          "icon": "trending-up",
-          "url": "/servicos/auditoria-completa"
-        }
-      ]
+      "title": "Auditoria de Acessibilidade",
+      "description": "Identificação aonde você está, o que pode fazer para melhorar, como evitar riscos legais e obter ganhos que farão maior diferença.",
+      "icon": "fast-forward",
+      "url": "/servicos/auditoria-acessibilidade"
     },
     {
-      "title": "Execução",
-      "services": [
-        {
-          "title": "Remediação de documentos",
-          "description": "Transformação de PDFs, apresentações e materiais didáticos em formatos acessíveis (tagged PDF, EPUB).",
-          "icon": "file-text",
-          "url": "/servicos/remediacao-documentos"
-        },
-        {
-          "title": "Sites acessíveis",
-          "description": "Implementação de componentes robustos com foco em semântica HTML e suporte a tecnologias assistivas.",
-          "icon": "code",
-          "url": "/servicos/desenvolvimento-acessivel"
-        },
-        {
-          "title": "Refatoração de Componentes Front-End",
-          "description": "Correção técnica de código para garantir semântica, ARIA e navegação por teclado.",
-          "icon": "refresh-ccw-dot",
-          "url": ""
-        }
-      ]
+      "title": "Remediação de documentos",
+      "description": "Transformação de PDFs, apresentações e materiais didáticos em formatos acessíveis (tagged PDF, EPUB).",
+      "icon": "file-text",
+      "url": "/servicos/remediacao-documentos"
     },
     {
-      "title": "Educação e Cultura",
-      "services": [
-        {
-          "title": "Treinamentos e Workshops",
-          "description": "Capacitação prática para desenvolvedores, QA's e designers sobre práticas modernas de inclusão.",
-          "icon": "book-open",
-          "url": "/servicos/treinamentos"
-        },
-        {
-          "title": "Mentoria BASE",
-          "description": "Acompanhamento individual ou em time para desenvolver maturidade em design e código inclusivo.",
-          "icon": "users",
-          "url": "https://mentoria.brunopulis.com"
-        },
-        {
-          "title": "Palestras",
-          "description": "Acompanhamento individual ou em time para desenvolver maturidade em design e código inclusivo.",
-          "icon": "presentation",
-          "url": "https://mentoria.brunopulis.com"
-        }
-      ]
+      "title": "Sites acessíveis",
+      "description": "Implementação de componentes robustos com foco em semântica HTML e suporte a tecnologias assistivas.",
+      "icon": "code",
+      "url": "/servicos/desenvolvimento-acessivel"
     },
     {
-      "title": "Acompanhamento Estratégico",
-      "services": [
-        {
-          "title": "Consultoria selo CPA",
-          "description": "Preparação técnica completa para obtenção do Selo de Acessibilidade Digital da CPA/SMPED.",
-          "icon": "shield-check",
-          "url": "/servicos/selo-cpa"
-        },
-        {
-          "title": "Consultoria estratégica",
-          "description": "Integração da acessibilidade no roadmap do produto e na cultura organizacional de ponta a ponta.",
-          "icon": "trending-up",
-          "url": "/servicos/consultoria-estrategica"
-        },
-        {
-          "title": "Monitoramento Contínuo de Acessibilidade",
-          "description": "Verificação mensal de novos lançamentos, atualizações de CMS e regressões de acessibilidade.",
-          "icon": "shield-check",
-          "url": "/servicos/selo-cpa"
-        }
-      ]
+      "title": "Treinamentos e Workshops",
+      "description": "Capacitação prática para desenvolvedores, QA's e designers sobre práticas modernas de inclusão.",
+      "icon": "book-open",
+      "url": "/servicos/treinamentos"
+    },
+    {
+      "title": "Mentoria BASE",
+      "description": "Acompanhamento individual ou em time para desenvolver maturidade em design e código inclusivo.",
+      "icon": "users",
+      "url": "https://mentoria.brunopulis.com"
+    },
+    {
+      "title": "Palestras",
+      "description": "Acompanhamento individual ou em time para desenvolver maturidade em design e código inclusivo.",
+      "icon": "presentation",
+      "url": "https://mentoria.brunopulis.com"
+    },
+    {
+      "title": "Consultoria selo CPA",
+      "description": "Preparação técnica completa para obtenção do Selo de Acessibilidade Digital da CPA/SMPED.",
+      "icon": "shield-check",
+      "url": "/servicos/selo-cpa"
     }
   ]
 }

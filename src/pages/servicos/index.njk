@@ -2,7 +2,7 @@
 layout: base.njk
 permalink: '/servicos/'
 title: 'Serviços'
-description: 'Ajudo organizações a tornarem seus produtos digitais, processos e cultura mais acessíveis e usáveis.'
+description: 'Ajudo organizações a tornarem seus sites e serviços digitais acessíveis para pessoas com deficiência e melhores para todos.'
 ---
 
 {% from "partials/service-card.njk" import serviceCard %}
@@ -13,20 +13,16 @@ description: 'Ajudo organizações a tornarem seus produtos digitais, processos 
     <p class="lead">
       {{ description }}
     </p>
+    <p class="lead">
+      Meus principais serviços são <a href="/servicos/auditoria-acessibilidade" class="hover:text-blood-red-950 underline underline-offset-4 hover:no-underline">auditorias de acessibilidade</a>
+      e <a href="http://" class="hover:text-blood-red-950 underline underline-offset-4 hover:no-underline">desenvolvimento acessível</a>.
+    </p>
 
-    {% for section in services.sections %}
-    <section>
-      <div class="flex items-center gap-4 my-10">
-        <h2 class="font-bold text-blood-red-950 text-2xl uppercase tracking-widest">{{ section.title }}</h2>
-      </div>
-
-      <div class="gap-6 grid md:grid-cols-3">
-        {% for service in section.services %}
-          {{ serviceCard(service) }}
-        {% endfor %}
-      </div>
-    </section>
-    {% endfor %}
+    <div class="gap-6 grid md:grid-cols-2 lg:grid-cols-3 my-12">
+      {% for service in services.sections %}
+        {{ serviceCard(service) }}
+      {% endfor %}
+    </div>
   </div>
 </section>
 
