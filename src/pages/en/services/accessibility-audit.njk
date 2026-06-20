@@ -1,0 +1,68 @@
+---
+layout: base.njk
+permalink: '/en/services/accessibility-audit/'
+title: 'Accessibility Audit'
+description: 'Clearly understand your product accessibility.'
+---
+
+<div class="page-content">
+  <div class="mx-auto px-8 max-w-7xl">
+    <h1 class="mb-4 font-black text-blood-red-950 text-4xl md:text-5xl">
+      {{ 'pages.services.audit.title' | i18n(locale) }}
+    </h1>
+
+    <p class="mb-12 font-bold text-lg leading-relaxed">
+      {{ 'pages.services.audit.description' | i18n(locale) }}
+    </p>
+
+    <p class="mb-12 text-lg leading-relaxed">{{ 'pages.services.audit.lead' | i18n(locale) }}</p>
+    <p class="mb-12 text-lg leading-relaxed">{{ 'pages.services.audit.text1' | i18n(locale) }}</p>
+    <p class="mb-12 text-lg leading-relaxed">{{ 'pages.services.audit.text2' | i18n(locale) | safe }}</p>
+    <p class="mb-12 text-lg leading-relaxed">{{ 'pages.services.audit.text3' | i18n(locale) }}</p>
+
+    <a href="/en/contact" class="font-bold hover:text-blood-red-950 underline underline-offset-4 hover:no-underline">
+      {{ 'pages.services.audit.cta' | i18n(locale) }}
+    </a>
+
+    <h2 class="mb-4 font-black text-blood-red-950 text-5xl">{{ 'pages.services.audit.typesTitle' | i18n(locale) }}</h2>
+
+    <details class="mb-4">
+      <summary class="bg-light-silver-100 p-4 border-2 border-blood-red-950 font-bold text-blood-red-950">{{ 'pages.services.audit.basic.summary' | i18n(locale) }}</summary>
+      <h3 class="my-4 font-black text-blood-red-950 text-xl">{{ 'pages.services.audit.basic.ideal' | i18n(locale) }}</h3>
+      <p>{{ 'pages.services.audit.basic.text' | i18n(locale) | safe }}</p>
+      <p>{{ 'pages.services.audit.basic.recommended' | i18n(locale) | safe }}</p>
+
+      <h3 class="my-4 font-black text-blood-red-950 text-xl">{{ 'pages.services.audit.basic.includesTitle' | i18n(locale) }}</h3>
+      <ul class="list-disc">
+        {% for item in 'pages.services.audit.basic.includes' | i18n(locale) %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      <p>{{ 'pages.services.audit.basic.deadline' | i18n(locale) | safe }}</p>
+    </details>
+
+    <details class="mb-4">
+      <summary class="bg-light-silver-100 p-4 border-2 border-blood-red-950 font-bold text-blood-red-950">{{ 'pages.services.audit.complete.summary' | i18n(locale) }}</summary>
+      <p class="my-8 font-bold">{{ 'pages.services.audit.complete.ideal' | i18n(locale) }}</p>
+      <p>{{ 'pages.services.audit.complete.text' | i18n(locale) | safe }}</p>
+      <p>{{ 'pages.services.audit.complete.recommended' | i18n(locale) }}</p>
+    </details>
+
+    <blockquote class="flex items-center bg-light-silver-100 p-4 border-blood-red-950 border-l-5">
+      <p class="text-lg">{{ 'pages.services.audit.observation' | i18n(locale) | safe }}</p>
+    </blockquote>
+
+    <section class="mb-4 py-4">
+      <h2 class="mb-4 font-black text-blood-red-950 text-5xl">{{ 'pages.services.audit.pricing.title' | i18n(locale) }}</h2>
+      <ul class="list-disc">
+        {% for item in 'pages.services.audit.pricing.items' | i18n(locale) %}
+        <li>{{ item | safe }}</li>
+        {% endfor %}
+      </ul>
+      <p>{{ 'pages.services.audit.pricing.note' | i18n(locale) }}</p>
+      <a href="/en/contact" class="font-bold hover:text-blood-red-950 underline underline-offset-4 hover:no-underline">{{ 'pages.services.audit.pricing.cta' | i18n(locale) }}</a>
+    </section>
+
+    {% include "partials/service-cta.njk" %}
+  </div>
+</div>

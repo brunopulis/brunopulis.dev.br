@@ -1,8 +1,8 @@
 <header class="py-4 border-2 border-light-silver-300">
-  <div class="flex justify-between items-center gap-4 mx-auto px-4 py-3 max-w-7xl">
-    <a href="/" class="flex items-center gap-2 link">
+  <div class="relative flex justify-between items-center mx-auto max-w-6xl h-16">
+    <a href="/" class="flex items-center gap-2">
       <img alt="" src="/assets/images/icon.svg" decoding="async" fetchpriority="auto" height="37" loading="eager" width="47" aria-hidden="true">
-      <span class="font-bold text-sm sm:text-lg">Bruno Pulis</span>
+      <span class="font-bold text-sm sm:text-lg">{{ 'site.name' | i18n(locale) }}</span>
     </a>
     {% include "partials/navigation.njk" %}
   </div>

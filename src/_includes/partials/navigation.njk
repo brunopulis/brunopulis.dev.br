@@ -1,19 +1,35 @@
-<nav class="">
+<nav class="hidden md:flex items-center gap-8">
   <ul class="nav-links">
     <li class="nav__item">
-      <a href="/servicos" class="nav__link">Serviços</a>
+      <a href="{{ '/en/services' if locale === 'en' else '/servicos' }}" class="nav__link">
+        {{ 'nav.servicos' | i18n(locale) }}
+      </a>
     </li>
     <li class="nav__item">
-      <a href="/sobre" class="nav__link">Sobre</a>
+      <a href="{{ '/en/portfolio' if locale === 'en' else '/portfolio' }}" class="nav__link">
+        {{ 'nav.portfolio' | i18n(locale) }}
+      </a>
     </li>
     <li class="nav__item">
-      <a href="/portfolio" class="nav__link">Portfolio</a>
+      <a href="{{ '/en/about' if locale === 'en' else '/sobre' }}" class="nav__link">
+        {{ 'nav.sobre' | i18n(locale) }}
+      </a>
     </li>
     <li class="nav__item">
-      <a href="/palestras" class="nav__link">Palestras</a>
-    </li>
-    <li class="nav__item">
-      <a href="/contato" class="nav__link">Contato</a>
+      <a href="{{ '/en/contact' if locale === 'en' else '/contato' }}" class="nav__link">
+        {{ 'nav.contato' | i18n(locale) }}
+      </a>
     </li>
   </ul>
 </nav>
+
+<div class="flex items-center gap-1">
+  <span class="hidden md:inline-flex">
+    <a href="{{ '/en/' if locale === 'en' else '/' }}" class="inline-flex justify-center items-center rounded-full w-9 h-9 text-sm font-bold transition-colors home-header-action {{ 'text-blood-red-950 underline' if locale === 'pt' else '' }}" aria-label="Português" {% if locale === 'pt' %}aria-current="page"{% endif %}>PT</a>
+    <a href="/en/" class="inline-flex justify-center items-center rounded-full w-9 h-9 text-sm font-bold transition-colors home-header-action {{ 'text-blood-red-950 underline' if locale === 'en' else '' }}" aria-label="English" {% if locale === 'en' %}aria-current="page"{% endif %}>EN</a>
+  </span>
+  <a href="/rss.xml" aria-label="{{ 'header.rss' | i18n(locale) }}"
+    class="hidden inline-flex justify-center items-center rounded-full w-9 h-9 transition-colors home-header-action">
+    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
+  </a>
+</div>

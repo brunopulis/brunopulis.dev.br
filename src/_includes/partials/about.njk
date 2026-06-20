@@ -2,41 +2,39 @@
   <div class="mx-auto max-w-7xl">
     <div class="items-start gap-16 grid md:grid-cols-2">
       <div class="space-y-6">
-        <p class="font-bold text-vista-blue-800 text-sm uppercase tracking-[0.15em]">O arquiteto</p>
-        <h2 class="text-4xl leading-snug">Rigores técnicos aplicados à <span class="italic">experiência humana.</span>
+        <p class="font-bold text-vista-blue-800 text-sm uppercase tracking-[0.15em]">{{ 'about.eyebrow' | i18n(locale) }}</p>
+        <h2 class="text-4xl leading-snug">{{ 'about.title' | i18n(locale) }}<span class="italic">{{ 'about.titleItalic' | i18n(locale) }}</span>
         </h2>
         <p class="font-light text-errie-black-900 text-lg leading-relaxed">
-          Acredito que a tecnologia deve ser <strong>invisível</strong> e <strong>universal</strong>. Ao longo de uma década, venho refinando metodologias
-          de desenvolvimento que priorizam a semântica e a autonomia do usuário final, independentemente de suas
-          capacidades funcionais.
+          {{ 'about.text' | i18n(locale) | safe }}
         </p>
       </div>
 
       <div class="gap-8 grid grid-cols-2">
         <article class="bg-white shadow-sm p-6 rounded-lg">
           <h3 class="mb-2 font-serif text-blood-red-950 text-4xl">
-            10 anos
+            {{ ('about.stats.experience.value' | i18n(locale)) }}
           </h3>
           <p class="font-bold text-errie-black-900 text-sm uppercase tracking-wider">
-            de experiência
+            {{ ('about.stats.experience.label' | i18n(locale)) }}
           </p>
         </article>
         <article class="bg-white shadow-sm p-6 rounded-lg">
-          <h3 class="mb-2 font-serif text-blood-red-950 text-4xl">Mais de 50</h3>
+          <h3 class="mb-2 font-serif text-blood-red-950 text-4xl">{{ 'about.stats.projects.value' | i18n(locale) }}</h3>
           <p class="font-bold text-errie-black-900 text-sm uppercase">
-            Projetos entregues
+            {{ 'about.stats.projects.label' | i18n(locale) }}
           </p>
         </article>
         <article class="bg-white shadow-sm p-6 rounded-lg">
-          <h3 class="mb-2 font-serif text-blood-red-950 text-4xl">100%</h3>
+          <h3 class="mb-2 font-serif text-blood-red-950 text-4xl">{{ 'about.stats.focus.value' | i18n(locale) }}</h3>
           <p class="font-bold text-errie-black-900 text-sm uppercase">
-            Foco em inclusão
+            {{ 'about.stats.focus.label' | i18n(locale) }}
           </p>
         </article>
         <article class="bg-white shadow-sm p-6 rounded-lg">
-          <h3 class="mb-2 font-serif text-blood-red-950 text-4xl">WCAG 2.2</h3>
+          <h3 class="mb-2 font-serif text-blood-red-950 text-4xl">{{ 'about.stats.standard.value' | i18n(locale) }}</h3>
           <p class="font-bold text-errie-black-900 text-sm uppercase">
-            Como padrão de conformidade
+            {{ 'about.stats.standard.label' | i18n(locale) }}
           </p>
         </article>
       </div>

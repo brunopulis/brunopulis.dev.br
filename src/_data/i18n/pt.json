@@ -1,0 +1,524 @@
+{
+  "site": {
+    "name": "Bruno Pulis",
+    "role": "Engenheiro de Acessibilidade.",
+    "seo": {"description": "Engenheiro de acessibilidade digital"}
+  },
+  "nav": {
+    "servicos": "Serviços",
+    "portfolio": "Portfolio",
+    "sobre": "Sobre",
+    "contato": "Contato",
+    "palestras": "Palestras"
+  },
+  "header": {
+    "skipLink": "Ir para conteúdo principal",
+    "search": "Pesquisar",
+    "rss": "Feed RSS"
+  },
+  "hero": {
+    "eyebrow": "Especialista em acessibilidade",
+    "title": "Acessibilidade como ",
+    "titleItalic": "convicção.",
+    "subtitle": "Sou Bruno Pulis, trabalho com acessibilidade digital e front-end para construir uma web onde a barreira técnica seja superada pela arquitetura da inclusão.",
+    "ctaServices": "Explore meus serviços",
+    "ctaContact": "Falar comigo",
+    "imgAlt": "Bruno Pulis"
+  },
+  "about": {
+    "eyebrow": "O arquiteto",
+    "title": "Rigores técnicos aplicados à ",
+    "titleItalic": "experiência humana.",
+    "text": "Acredito que a tecnologia deve ser <strong>invisível</strong> e <strong>universal</strong>. Ao longo de uma década, venho refinando metodologias de desenvolvimento que priorizam a semântica e a autonomia do usuário final, independentemente de suas capacidades funcionais.",
+    "stats": {
+      "experience": {"value": "10 anos", "label": "de experiência"},
+      "projects": {"value": "Mais de 50", "label": "Projetos entregues"},
+      "focus": {"value": "100%", "label": "Foco em inclusão"},
+      "standard": {"value": "WCAG 2.2", "label": "Como padrão de conformidade"}
+    }
+  },
+  "servicesSection": {
+    "title": "O que eu faço",
+    "items": [
+      {
+        "title": "Diagnóstico e Auditoria",
+        "description": "Análise técnica profunda baseada nas heurísticas da WCAG 2.2 para identificar e catalogar barreiras de acessibilidade."
+      },
+      {
+        "title": "Remediação de Documentos",
+        "description": "Adaptação de PDFs e documentos digitais para compatibilidade total com leitores de tela e tecnologias assistivas."
+      },
+      {
+        "title": "Treinamentos e Workshops",
+        "description": "Capacitação técnica para times de design e engenharia sobre cultura inclusiva e padrões técnicos de implementação."
+      },
+      {
+        "title": "Coaching e Mentoria",
+        "description": "Acompanhamento individual para desenvolvedores que buscam elevar o nível de acessibilidade em seus projetos."
+      },
+      {
+        "title": "Palestras",
+        "description": "Acompanhamento individual para desenvolvedores que buscam elevar o nível de acessibilidade em seus projetos."
+      },
+      {
+        "title": "Consultoria Estratégica",
+        "description": "Planejamento de longo prazo para integração de acessibilidade no ciclo de vida de desenvolvimento de produtos."
+      }
+    ],
+    "cta": "Explore todos serviços"
+  },
+  "process": {
+    "eyebrow": "Metodologia",
+    "title": "O Processo Arquitetônico",
+    "steps": [
+      {
+        "phase": "Alinhamento",
+        "title": "Definição de Escopo",
+        "description": "Entendimento das metas de negócio e níveis de conformidade exigidos pelo mercado."
+      },
+      {
+        "phase": "Diagnóstico",
+        "title": "Análise Crítica",
+        "description": "Identificação técnica das falhas de interação e barreiras semânticas no sistema atual."
+      },
+      {
+        "phase": "Execução",
+        "title": "Refatoração Técnica",
+        "description": "Aplicação das correções e novos padrões de desenvolvimento focado em acessibilidade."
+      },
+      {
+        "phase": "Suporte",
+        "title": "Validação e Entrega",
+        "description": "Testes com usuários e tecnologias assistivas para garantir conformidade plena."
+      }
+    ]
+  },
+  "portfolioSection": {
+    "eyebrow": "Resultados",
+    "title": "Projetos que definem o ",
+    "titleItalic": "padrão.",
+    "cta": "Ver portfólio completo",
+    "projects": [
+      {
+        "category": "Plataforma SaaS",
+        "name": "Reponto",
+        "description": "Acessibilidade centralizada para gestão de recursos humanos em grande escala.",
+        "imgAlt": "Reponto Project"
+      },
+      {
+        "category": "E-commerce",
+        "name": "Mone de França",
+        "description": "Experiência de compra fluida e inclusiva para uma marca de moda premium.",
+        "imgAlt": "Mone de França Project"
+      },
+      {
+        "category": "Portfólio Profissional",
+        "name": "João Kioshi",
+        "description": "Redesign focado em performance técnica e acessibilidade total de interface.",
+        "imgAlt": "João Kioshi Project"
+      }
+    ]
+  },
+  "contactSection": {
+    "eyebrow": "Vamos conversar?",
+    "title": "Pronto para tornar seu produto ",
+    "titleItalic": "verdadeiramente",
+    "titleEnd": " acessível?",
+    "email": "brunopulis@protonmail.com",
+    "mailSubject": "Tenho um projeto em mente"
+  },
+  "footer": {
+    "institutionalLinks": "Links institucionais",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "youtube": "YouTube",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de uso",
+    "accessibility": "Declaração de Acessibilidade"
+  },
+  "serviceCta": {
+    "title": "Vamos conversar!",
+    "text": "Se você busca suporte contínuo em acessibilidade ou uma parceria de longo prazo para atender os requisitos legais brasileiros, adoraria ouvir de você.",
+    "cta": "Entre em contato",
+    "ctaLinkedin": "LinkedIn"
+  },
+  "services": [
+    {
+      "title": "Auditoria de Acessibilidade",
+      "description": "Identificação aonde você está, o que pode fazer para melhorar, como evitar riscos legais e obter ganhos que farão maior diferença.",
+      "icon": "fast-forward",
+      "url": "/servicos/auditoria-acessibilidade"
+    },
+    {
+      "title": "Remediação de documentos",
+      "description": "Transformação de PDFs, apresentações e materiais didáticos em formatos acessíveis (tagged PDF, EPUB).",
+      "icon": "file-text",
+      "url": "/servicos/remediacao-documentos"
+    },
+    {
+      "title": "Treinamentos e Workshops",
+      "description": "Capacitação prática para desenvolvedores, QA's e designers sobre práticas modernas de inclusão.",
+      "icon": "book-open",
+      "url": "/servicos/treinamentos"
+    },
+    {
+      "title": "Mentoria BASE",
+      "description": "Acompanhamento individual ou em time para desenvolver maturidade em design e código inclusivo.",
+      "icon": "users",
+      "url": "https://mentoria.brunopulis.com"
+    },
+    {
+      "title": "Palestras",
+      "description": "Acompanhamento individual ou em time para desenvolver maturidade em design e código inclusivo.",
+      "icon": "presentation",
+      "url": "https://mentoria.brunopulis.com"
+    },
+    {
+      "title": "Consultoria selo CPA",
+      "description": "Preparação técnica completa para obtenção do Selo de Acessibilidade Digital da CPA/SMPED.",
+      "icon": "shield-check",
+      "url": "/servicos/selo-cpa"
+    }
+  ],
+  "pages": {
+    "home": {"title": "Página inicial"},
+    "about": {
+      "title": "Sobre",
+      "description": "Ajudo organizações a tornarem seus produtos digitais, processos e cultura mais acessíveis e usáveis.",
+      "lead": "Engenheiro de acessibilidade digital com foco em arquitetura inclusiva.",
+      "journeyTitle": "Minha Jornada",
+      "journeyP1": "Minha jornada no ecossistema digital começou em 2006, não atrás de uma IDE, mas no atendimento ao cliente. Essa base fundamental me ensinou que por trás de cada linha de código, existe uma necessidade humana real.",
+      "journeyP2": "Ao transicionar para a engenharia de software, levei comigo essa obsessão pela experiência do usuário. Percebi cedo que a web \"padrão\" excluía milhões. Desde então, especializei-me em transformar interfaces complexas em experiências inclusivas e tecnicamente impecáveis.",
+      "valuesTitle": "Valores",
+      "values": [
+        "Inclusão: Projetar para a margem é garantir a qualidade para o centro.",
+        "Educação: O conhecimento só é valioso quando compartilhado.",
+        "Qualidade: Acessibilidade é sinônimo de código limpo."
+      ]
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "Projetos de desenvolvimento acessível, consultoria e implementação de interfaces inclusivas.",
+      "projects": [
+        {"title": "Projeto 01", "description": "Descrição do projeto.", "link": "Ver projeto →"},
+        {"title": "Projeto 02", "description": "Descrição do projeto.", "link": "Ver projeto →"},
+        {"title": "Projeto 03", "description": "Descrição do projeto.", "link": "Ver projeto →"}
+      ]
+    },
+    "talks": {
+      "title": "Palestras",
+      "description": "Palestras e apresentações sobre acessibilidade digital, design inclusivo e desenvolvimento web acessível.",
+      "talks": [
+        {
+          "type": "Keynote",
+          "title": "Semantic HTML: O Básico que Funciona",
+          "description": "Uma masterclass sobre HTML semântico e sua importância para a acessibilidade."
+        },
+        {
+          "type": "Talk",
+          "title": "Acessibilidade Além do Leitor de Tela",
+          "description": "Entendendo que acessibilidade vai muito além da deficiência visual."
+        },
+        {
+          "type": "Workshop",
+          "title": "WCAG 2.2 na Prática",
+          "description": "Workshop prático sobre implementação do WCAG 2.2 AA."
+        }
+      ],
+      "link": "Ver slides →"
+    },
+    "contact": {
+      "title": "Contato",
+      "description": "Estou disponível para projetos de consultoria, auditoria e desenvolvimento acessível. Vamos conversar!",
+      "email": "Mandar um e-mail",
+      "whatsapp": "Falar no WhatsApp",
+      "linkedin": "LinkedIn",
+      "mastodon": "Mastodon",
+      "bluesky": "Bluesky",
+      "sectionTitle": "Quer bater um papo sobre acessibilidade?",
+      "scheduleText": "Marque um horário em:",
+      "adplist": "ADPList",
+      "mentoring": "Mentoria individual"
+    },
+    "privacy": {
+      "title": "Política de Privacidade",
+      "description": "Saiba como coletamos, usamos e protegemos seus dados pessoais em conformidade com a Lei Geral de Proteção de Dados (LGPD).",
+      "sections": [
+        {
+          "heading": "Dados que coletamos",
+          "text": "Coletamos apenas os dados que você voluntariamente fornece ao utilizar o formulário de contato: nome, e-mail e mensagem. Não coletamos dados sensíveis ou de navegação sem seu consentimento explícito."
+        },
+        {
+          "heading": "Cookies",
+          "text": "Este site não utiliza cookies de rastreamento ou publicidade. Podem existir cookies estritamente necessários para o funcionamento técnico da plataforma de hospedagem (Vercel), os quais não armazenam informações pessoais."
+        },
+        {
+          "heading": "Finalidade do tratamento",
+          "text": "Os dados fornecidos são utilizados exclusivamente para responder a sua solicitação de contato. Não compartilhamos seus dados com terceiros, exceto quando exigido por lei."
+        },
+        {
+          "heading": "Armazenamento e segurança",
+          "text": "Adotamos práticas de segurança da informação para proteger seus dados contra acesso não autorizado, alteração ou destruição. Os dados são armazenados em servidores seguros e mantidos apenas pelo período necessário à finalidade do contato."
+        },
+        {
+          "heading": "Seus direitos (LGPD)",
+          "intro": "Nos termos da Lei nº 13.709/2018 (LGPD), você tem direito a:",
+          "items": [
+            "Confirmar a existência de tratamento de seus dados;",
+            "Acessar seus dados pessoais;",
+            "Corrigir dados incompletos, inexatos ou desatualizados;",
+            "Solicitar a eliminação dos dados tratados com seu consentimento;",
+            "Revogar o consentimento a qualquer momento."
+          ]
+        },
+        {
+          "heading": "Contato do encarregado (DPO)",
+          "text": "Para exercer seus direitos ou esclarecer dúvidas sobre esta política, entre em contato pelo e-mail brunopulis@protonmail.com."
+        },
+        {
+          "heading": "Alterações",
+          "text": "Esta política pode ser atualizada periodicamente. Recomendamos a consulta regular desta página para ciência de eventuais mudanças."
+        }
+      ],
+      "lastUpdate": "Última atualização: maio de 2026."
+    },
+    "terms": {
+      "title": "Termos de Uso",
+      "description": "Condições gerais para navegação e utilização do site Bruno Pulis.",
+      "sections": [
+        {
+          "heading": "Aceitação dos termos",
+          "text": "Ao acessar e utilizar este site, você declara ter lido, compreendido e aceitado estes Termos de Uso. Caso não concorde com qualquer disposição, recomendamos que não utilize o site."
+        },
+        {
+          "heading": "Conteúdo e propriedade intelectual",
+          "text1": "Todo o conteúdo disponível neste site — incluindo textos, imagens, logotipos e materiais de apresentação — é de titularidade de Bruno Pulis, salvo indicação em contrário. É vedada a reprodução, distribuição ou modificação sem autorização prévia por escrito.",
+          "text2": "Palestras e apresentações podem conter materiais de terceiros devidamente referenciados; a responsabilidade sobre esses conteúdos cabe aos respectivos autores."
+        },
+        {
+          "heading": "Uso do site",
+          "text": "Você se compromete a utilizar este site de acordo com a legislação vigente e a não praticar atos que possam comprometer a integridade dos sistemas, como inserção de malware, tentativas de acesso não autorizado ou qualquer outra atividade maliciosa."
+        },
+        {
+          "heading": "Links externos",
+          "text": "Este site pode conter links para sites de terceiros. Não nos responsabilizamos pelo conteúdo, práticas de privacidade ou disponibilidade desses sites. A inclusão de links não implica endosso ou afiliação."
+        },
+        {
+          "heading": "Limitação de responsabilidade",
+          "text": "O conteúdo deste site é fornecido para fins informativos e educacionais. Bruno Pulis não se responsabiliza por decisões tomadas com base nas informações aqui contidas, nem por danos diretos ou indiretos decorrentes do uso ou da impossibilidade de uso do site."
+        },
+        {
+          "heading": "Legislação e foro",
+          "text": "Estes Termos de Uso são regidos pela legislação brasileira. Fica eleito o foro da comarca de Belo Horizonte, Minas Gerais, para solução de quaisquer controvérsias oriundas deste instrumento."
+        }
+      ],
+      "lastUpdate": "Última atualização: maio de 2026."
+    },
+    "accessibility": {
+      "title": "Declaração de Acessibilidade",
+      "description": "Compromisso com a inclusão digital e conformidade com as diretrizes de acessibilidade para a web.",
+      "sections": [
+        {
+          "heading": "Compromisso",
+          "text": "Bruno Pulis está comprometido em garantir que este site seja acessível a todas as pessoas, independentemente de suas capacidades físicas, sensoriais ou cognitivas. Acreditamos que a acessibilidade digital é um direito fundamental e um pilar essencial da qualidade na web."
+        },
+        {
+          "heading": "Padrões adotados",
+          "text": "Este site segue as diretrizes da Web Content Accessibility Guidelines (WCAG) 2.2, nível AA, do W3C. Isso inclui, entre outras práticas:",
+          "items": [
+            "HTML semântico com landmarks e heading hierarchy adequados;",
+            "Contraste de cores suficiente entre texto e fundo;",
+            "Navegação por teclado visível e previsível;",
+            "Textos alternativos para imagens informativas;",
+            "Suporte a leitores de tela e tecnologias assistivas;",
+            "Redimensionamento de texto sem perda de funcionalidade."
+          ]
+        },
+        {
+          "heading": "Testes e ferramentas",
+          "text": "Realizamos testes periódicos de acessibilidade utilizando:",
+          "items": [
+            "WAVE (WebAIM);",
+            "Axe DevTools;",
+            "Lighthouse (Chrome DevTools);",
+            "Leitores de tela (NVDA, VoiceOver);",
+            "Navegação exclusiva por teclado."
+          ]
+        },
+        {
+          "heading": "Compatibilidade",
+          "text": "O site é compatível com navegadores modernos (Chrome, Firefox, Safari, Edge) e tecnologias assistivas comuns. Para melhor experiência, recomenda-se manter o navegador e o leitor de tela atualizados."
+        },
+        {
+          "heading": "Reportar barreiras",
+          "text": "Se você encontrar qualquer barreira de acessibilidade ao navegar neste site, pedimos que nos informe. Sua contribuição é essencial para melhorarmos continuamente.",
+          "contact": "Envie sua mensagem pelo formulário de contato ou diretamente para brunopulis@protonmail.com."
+        }
+      ],
+      "lastUpdate": "Última atualização: maio de 2026."
+    },
+    "services": {
+      "index": {
+        "title": "Serviços",
+        "description": "Ajudo organizações a tornarem seus sites e serviços digitais acessíveis para pessoas com deficiência e melhores para todos.",
+        "lead": "Meus principais serviços são ",
+        "auditLink": "auditorias de acessibilidade",
+        "and": " e ",
+        "devLink": "desenvolvimento acessível",
+        "ctaTitle": "Pronto para tornar seu projeto acessível?",
+        "ctaText": "Vamos conversar sobre como aplicar as melhores práticas de inclusão no seu produto digital.",
+        "ctaButton": "Iniciar Consultoria"
+      },
+      "accessibleSites": {
+        "title": "Construção de Sites Acessíveis",
+        "description": "Sites que funcionam de verdade para todo mundo.",
+        "lead": "Sites acessíveis, são interfaces que seguem padrões e normas internacionais de desenvolvimento, visando a melhor compreensão de todas as pessoas.",
+        "cta": "Solicitar orçamento de sites acessíveis",
+        "sectionTitle": "O que significa construir um site acessível de verdade",
+        "paragraphs": [
+          "Não é instalar um plugin. Não é adicionar um botão de <strong>modo acessível</strong>. Não é passar pelo validador automático e comemorar zero erros.",
+          "Acessibilidade real começa na arquitetura da informação e atravessa cada decisão de markup, de <abbr title=\"Cascade Style Sheets\">CSS</abbr> e de JavaScript até o deploy. É uma postura de desenvolvimento, não uma feature.",
+          "Quando entro em um projeto, acessibilidade não é a última etapa. É o critério que guia todas as outras."
+        ],
+        "howIWork": {
+          "summary": "Como eu trabalho?",
+          "intro": "Cada projeto começa com entendimento: do produto, do público, dos fluxos que precisam funcionar. A partir daí, as decisões técnicas têm contexto.",
+          "processIntro": "O processo cobre:",
+          "items": [
+            "Definição do que precisa ser feito;",
+            "Marcação de títulos, listas e tabelas;",
+            "Texto alternativo para imagens e gráficos;",
+            "Configuração de idioma e metadados do documento;",
+            "Campos de formulário acessíveis (quando aplicável);",
+            "Verificação com ferramentas como PAC 2024 e Adobe Acrobat Accessibility Checker"
+          ],
+          "deadline": "<strong>Prazo de entrega:</strong> 5 dias úteis, após assinatura do contrato de serviço."
+        },
+        "techs": {
+          "summary": "Tecnologias que utilizo",
+          "intro": "Trabalho principalmente com as ferramentas que conheço bem e que produzem código limpo por padrão:",
+          "items": [
+            "<strong>WordPress:</strong> com desenvolvimento de temas e customizações focadas em semântica e padrões;",
+            "<strong>Astro:</strong> para sites estáticos ou com conteúdo híbrido, com foco em performance e marcação correta;",
+            "<strong>Eleventy (11ty):</strong> para projetos editoriais, blogs e sites que priorizam HTML simples e bem estruturado;",
+            "<strong>HTML, CSS e JavaScript:</strong> sem dependência de frameworks quando o projeto não exige."
+          ],
+          "footer": "Não vendo stack. Escolho o que faz sentido para o problema."
+        },
+        "notDo": {
+          "summary": "O que eu não faço",
+          "text": "Não entrego sites com overlay de acessibilidade, aqueles widgets que prometem \"tornar qualquer site acessível\" com um script.",
+          "text2": "Eles não funcionam, criam conflitos com tecnologias assistivas e geram uma falsa sensação de conformidade."
+        },
+        "audience": {
+          "summary": "Para quem faz sentido",
+          "text": "Este serviço é para quem está construindo algo novo ou refazendo algo que não funciona bem — e quer que o resultado seja durável.",
+          "text2": "Pode ser uma landing page, um site institucional, um portal com conteúdo dinâmico ou um sistema com fluxos complexos. O que importa é que a acessibilidade entre no projeto desde o início, não como correção depois."
+        },
+        "start": {
+          "quote": "<strong>Como começar?</strong> Me conta o que você está construindo, qual é o contexto e o que não está funcionando. A partir daí a gente conversa.",
+          "cta": "Me mande um e-mail"
+        },
+        "pricing": {
+          "title": "Investimentos",
+          "items": [
+            "<strong>Landing Pages:</strong> a partir de R$ 1.500,00;",
+            "<strong>Sites institucionais:</strong> a partir de R$ 3.500,00;",
+            "<strong>Sites para ONG's ou associações (valor social):</strong> a partir de R$ 600,00."
+          ],
+          "note": "O preço depende da complexidade do projeto. O preço pode ser ajustado ao seu orçamento, sem nenhum problema.",
+          "cta": "Solicitar orçamento de criação de sites"
+        }
+      },
+      "audit": {
+        "title": "Auditoria de Acessibilidade",
+        "description": "Entenda claramente a acessibilidade do seu produto.",
+        "lead": "Minhas auditorias avaliam a acessibilidade do seu site ou aplicativo e fornecem recomendações práticas para melhorias.",
+        "text1": "Elas avaliam o cumprimento das Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2 nos níveis A e AA. Seguindo os padrões de acessibilidade e usabilidade do Governo Brasileiro e as normas da Associação Brasileira de Normas Técnicas (ABNT): NBR 17060 e NBR 17225.",
+        "text2": "Não forneço relatórios complexos, meus relatórios são objetivos para você corrigir os problemas de forma prática. Analisando a <strong>priorização</strong>, <strong>impacto</strong> e <strong>risco legal</strong> de cada problema encontrado.",
+        "text3": "O relatório é entregue em formato de planilha, para facilitar a integração no seu ambiente de desenvolvimento.",
+        "cta": "Solicitar orçamento de auditoria",
+        "typesTitle": "Tipos de auditoria",
+        "basic": {
+          "summary": "Auditoria básica",
+          "ideal": "Ideal para quem quer começar",
+          "text": "A <strong>Auditoria básica</strong> é uma leitura rápida e honesta do seu produto. Não é uma auditoria completa. É o primeiro passo: entender o terreno antes de planejar qualquer movimento.",
+          "recommended": "<strong>Recomendado para:</strong> pequenas empresas, blogs, portfólios, páginas de vendas.",
+          "includesTitle": "O que você recebe:",
+          "includes": [
+            "Avaliação de 5 fluxos principais;",
+            "Testes manuais e automatizados;",
+            "Lista priorizada de problemas: o que bloqueia, o que degrada, o que é cosmético;",
+            "Recomendações objetivas para correções;",
+            "Indicações de referência para cada correção (WCAG, WAI-ARIA);",
+            "Relatório em formato acessível, pronto para compartilhar com o time."
+          ],
+          "deadline": "<strong>Prazo de entrega:</strong> 5 dias úteis, após assinatura do contrato de serviço."
+        },
+        "complete": {
+          "summary": "Auditoria completa",
+          "text": "A <strong>Auditoria completa</strong> é uma análise aprofundada de todo o seu produto digital. Inclui todos os fluxos, componentes e páginas.",
+          "recommended": "Recomendado para: empresas de médio e grande porte, e-commerces, plataformas SaaS."
+        },
+        "observation": "<strong>Observação:</strong> Todas as auditorias incluem uma reunião pós-auditoria de 1 hora para discutir o relatório, além de suporte por e-mail para quaisquer dúvidas.",
+        "pricing": {
+          "title": "Investimentos",
+          "items": [
+            "<strong>Auditoria básica:</strong> a partir de R$ 800,00;",
+            "<strong>Auditoria completa:</strong> a partir de R$ 1.600,00;"
+          ],
+          "note": "O preço depende da complexidade do projeto. O preço pode ser ajustado ao seu orçamento, sem nenhum problema.",
+          "cta": "Solicitar orçamento de auditoria"
+        }
+      },
+      "remediation": {
+        "title": "Remediação de Documentos",
+        "description": "Deixe seus documentos acessíveis para todas as pessoas.",
+        "lead": "A remediação de documentos visa otimizar e garantir que todas as pessoas possam acessar o conteúdo de maneira ampla e irrestrita.",
+        "cta": "Solicitar orçamento de remediação",
+        "problemTitle": "O problema é mais comum do que parece",
+        "problemText1": "A maioria dos documentos digitais nasce inacessível. Um PDF exportado do Word, uma planilha de dados, uma apresentação de slides — todos podem parecer funcionais na tela, mas para quem usa leitor de tela, não passam de ruído ou silêncio.",
+        "problemText2": "Isso não é descuido. É falta de conhecimento sobre como estruturar documentos de forma que tecnologias assistivas consigam interpretá-los corretamente.",
+        "whatIDo": {
+          "summary": "O que eu faço?",
+          "text": "Recebo o documento que você já tem e entrego uma versão acessível — com estrutura semântica correta, marcações adequadas e conformidade com os padrões técnicos exigidos.",
+          "includesTitle": "O que você recebe:",
+          "includes": [
+            "Definição correta da ordem de leitura;",
+            "Marcação de títulos, listas e tabelas;",
+            "Texto alternativo para imagens e gráficos;",
+            "Configuração de idioma e metadados do documento;",
+            "Campos de formulário acessíveis (quando aplicável);",
+            "Verificação com ferramentas como PAC 2024 e Adobe Acrobat Accessibility Checker"
+          ],
+          "deadline": "<strong>Prazo de entrega:</strong> 5 dias úteis, após assinatura do contrato de serviço."
+        },
+        "docTypes": {
+          "summary": "Tipos de documentos",
+          "intro": "Trabalho com os formatos mais comuns no dia a dia das organizações:",
+          "items": [
+            "<abbr title=\"Portable Document File\">PDF:</abbr> o mais solicitado e o mais complexo de fazer certo;",
+            "<strong>Word (.docx)</strong>: remediação na origem, antes de gerar o PDF;",
+            "<strong>PowerPoint (.pptx)</strong>: slides com ordem de leitura e textos alternativos;",
+            "<strong>Excel (.xlsx)</strong>: tabelas de dados com marcação semântica adequada."
+          ]
+        },
+        "when": {
+          "summary": "Quando faz sentido contratar esse serviço?",
+          "text": "Se sua organização precisa publicar documentos acessíveis — por obrigação legal, por contrato ou por convicção — e o fluxo interno ainda não produz isso de forma consistente, a remediação é o caminho mais direto.",
+          "text2": "Também faz sentido quando há um acervo de documentos já publicados que precisam ser corrigidos."
+        },
+        "observation": "<strong>Observação:</strong> o prazo de entrega das remediações pode variar de acordo com o tamanho do conteúdo.",
+        "pricing": {
+          "title": "Investimentos",
+          "items": [
+            "<strong>Por página:</strong> a partir de R$ 80,00 (a página);",
+            "<strong>Documento fechado:</strong> a partir de R$ 600,00."
+          ],
+          "note": "O preço depende da complexidade do projeto. O preço pode ser ajustado ao seu orçamento, sem nenhum problema.",
+          "cta": "Solicitar orçamento de remediação"
+        }
+      }
+    }
+  }
+}

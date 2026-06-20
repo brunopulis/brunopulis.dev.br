@@ -1,8 +1,8 @@
 ---
 layout: base.njk
-permalink: '/servicos/'
-title: 'Serviços'
-description: 'Ajudo organizações a tornarem seus sites e serviços digitais acessíveis para pessoas com deficiência e melhores para todos.'
+permalink: '/en/services/'
+title: 'Services'
+description: 'I help organizations make their websites and digital services accessible to people with disabilities and better for everyone.'
 ---
 
 {% from "partials/service-card.njk" import serviceCard %}
@@ -10,15 +10,11 @@ description: 'Ajudo organizações a tornarem seus sites e serviços digitais ac
 <section class="page-content">
   <div class="mx-auto px-8 max-w-7xl">
     <h1 class="text-blood-red-950">{{ 'pages.services.index.title' | i18n(locale) }}</h1>
-    <p class="text-errie-black-900 lead">
+    <p class="lead">
       {{ 'pages.services.index.description' | i18n(locale) }}
     </p>
-    <p class="text-errie-black-900 lead">
-      {{ 'pages.services.index.lead' | i18n(locale) }}
-      <a href="/servicos/auditoria-acessibilidade" class="text-blood-red-950 hover:text-blood-red-900 underline underline-offset-4 hover:no-underline">{{ 'pages.services.index.auditLink' | i18n(locale) }}</a>{{ 'pages.services.index.and' | i18n(locale) }}
-      <a href="/servicos/sites-acessiveis" class="text-blood-red-950 hover:text-blood-red-900 underline underline-offset-4 hover:no-underline">
-        {{ 'pages.services.index.devLink' | i18n(locale) }}
-      </a>.
+    <p class="lead">
+      {{ 'pages.services.index.lead' | i18n(locale) }}<a href="/en/services/accessibility-audit" class="hover:text-blood-red-950 underline underline-offset-4 hover:no-underline">{{ 'pages.services.index.auditLink' | i18n(locale) }}</a>{{ 'pages.services.index.and' | i18n(locale) }}<a href="/en/services/accessible-sites" class="hover:text-blood-red-950 underline underline-offset-4 hover:no-underline">{{ 'pages.services.index.devLink' | i18n(locale) }}</a>.
     </p>
 
     <div class="gap-6 grid md:grid-cols-2 lg:grid-cols-3 my-12">
@@ -35,7 +31,7 @@ description: 'Ajudo organizações a tornarem seus sites e serviços digitais ac
       <h2 class="mb-4 font-black text-blood-red-950 text-4xl">{{ 'pages.services.index.ctaTitle' | i18n(locale) }}</h2>
       <p class="text-secondary text-lg">{{ 'pages.services.index.ctaText' | i18n(locale) }}</p>
     </div>
-    <a href="/contato"
+    <a href="/en/contact"
       class="bg-blood-red-950 px-12 py-5 rounded font-bold text-on-primary text-white text-lg hover:scale-[1.02] active:scale-95 transition-all">
       {{ 'pages.services.index.ctaButton' | i18n(locale) }}
     </a>

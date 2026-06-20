@@ -1,0 +1,25 @@
+---
+permalink: /rss.xml
+eleventyExcludeFromCollections: true
+---
+{%- set dummy = '' -%}
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>{{ 'site.name' | i18n('pt') }}</title>
+    <link>https://brunopulis.com/</link>
+    <description>{{ 'site.seo.description' | i18n('pt') }}</description>
+    <language>pt-br</language>
+    <atom:link href="https://brunopulis.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>{{ collections.pages | getNewestCollectionItemDate | dateToRfc822 }}</lastBuildDate>
+    {% for page in collections.pages %}
+    <item>
+      <title>{{ page.data.title }}</title>
+      <link>https://brunopulis.com{{ page.url }}</link>
+      <guid isPermaLink="true">https://brunopulis.com{{ page.url }}</guid>
+      <description>{{ page.data.description or '' }}</description>
+      <pubDate>{{ page.date | dateToRfc822 }}</pubDate>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

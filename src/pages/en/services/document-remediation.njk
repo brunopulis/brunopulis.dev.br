@@ -1,0 +1,78 @@
+---
+layout: base.njk
+permalink: '/en/services/document-remediation/'
+title: 'Document Remediation'
+description: 'Make your documents accessible to everyone.'
+---
+
+<div class="page-content">
+  <div class="mx-auto px-8 max-w-7xl">
+    <h1 class="mb-4 font-black text-blood-red-950 text-4xl md:text-5xl">
+      {{ 'pages.services.remediation.title' | i18n(locale) }}
+    </h1>
+
+    <p class="mb-12 font-bold text-lg leading-relaxed">
+      {{ 'pages.services.remediation.description' | i18n(locale) }}
+    </p>
+
+    <p class="mb-12 text-lg leading-relaxed">{{ 'pages.services.remediation.lead' | i18n(locale) }}</p>
+
+    <a href="/en/contact" class="font-bold hover:text-blood-red-950 underline underline-offset-4 hover:no-underline">
+      {{ 'pages.services.remediation.cta' | i18n(locale) }}
+    </a>
+
+    <h2 class="mb-4 font-black text-blood-red-950 text-5xl">{{ 'pages.services.remediation.problemTitle' | i18n(locale) }}</h2>
+
+    <p class="mb-12 text-lg leading-relaxed">{{ 'pages.services.remediation.problemText1' | i18n(locale) }}</p>
+    <p class="mb-12 text-lg leading-relaxed">{{ 'pages.services.remediation.problemText2' | i18n(locale) }}</p>
+
+    <details class="mb-4">
+      <summary class="bg-light-silver-100 p-4 border-2 border-blood-red-950 font-bold text-blood-red-950">
+        {{ 'pages.services.remediation.whatIDo.summary' | i18n(locale) }}
+      </summary>
+      <p class="my-4">{{ 'pages.services.remediation.whatIDo.text' | i18n(locale) }}</p>
+      <h3 class="my-4 font-black text-blood-red-950 text-xl">{{ 'pages.services.remediation.whatIDo.includesTitle' | i18n(locale) }}</h3>
+      <ul class="list-disc">
+        {% for item in 'pages.services.remediation.whatIDo.includes' | i18n(locale) %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      <p>{{ 'pages.services.remediation.whatIDo.deadline' | i18n(locale) | safe }}</p>
+    </details>
+
+    <details class="mb-4">
+      <summary class="bg-light-silver-100 p-4 border-2 border-blood-red-950 font-bold text-blood-red-950">{{ 'pages.services.remediation.docTypes.summary' | i18n(locale) }}</summary>
+      <p class="my-4">{{ 'pages.services.remediation.docTypes.intro' | i18n(locale) }}</p>
+      <ul class="list-disc">
+        {% for item in 'pages.services.remediation.docTypes.items' | i18n(locale) %}
+        <li>{{ item | safe }}</li>
+        {% endfor %}
+      </ul>
+    </details>
+
+    <details class="mb-4">
+      <summary class="bg-light-silver-100 p-4 border-2 border-blood-red-950 font-bold text-blood-red-950">
+        {{ 'pages.services.remediation.when.summary' | i18n(locale) }}
+      </summary>
+      <p class="my-4">{{ 'pages.services.remediation.when.text' | i18n(locale) }}</p>
+      <p class="my-4">{{ 'pages.services.remediation.when.text2' | i18n(locale) }}</p>
+    </details>
+
+    <blockquote class="flex items-center bg-light-silver-100 p-4 border-blood-red-950 border-l-5">
+      <p class="text-lg">{{ 'pages.services.remediation.observation' | i18n(locale) | safe }}</p>
+    </blockquote>
+
+    <section class="mb-4 py-4">
+      <h2 class="mb-4 font-black text-blood-red-950 text-5xl">{{ 'pages.services.remediation.pricing.title' | i18n(locale) }}</h2>
+      <ul class="list-disc">
+        {% for item in 'pages.services.remediation.pricing.items' | i18n(locale) %}
+        <li>{{ item | safe }}</li>
+        {% endfor %}
+      </ul>
+      <p>{{ 'pages.services.remediation.pricing.note' | i18n(locale) }}</p>
+      <a href="/en/contact" class="font-bold hover:text-blood-red-950 underline underline-offset-4 hover:no-underline">{{ 'pages.services.remediation.pricing.cta' | i18n(locale) }}</a>
+    </section>
+
+    {% include "partials/service-cta.njk" %}
+  </div>
+</div>

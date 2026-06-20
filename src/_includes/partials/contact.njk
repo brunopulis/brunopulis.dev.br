@@ -1,12 +1,12 @@
 <section class="bg-errie-black-900 px-8 py-32 text-white">
   <div class="mx-auto max-w-7xl text-center">
-    <p class="mb-6 font-bold text-vista-blue text-sm uppercase tracking-[0.15em]">Vamos conversar?</p>
+    <p class="mb-6 font-bold text-vista-blue text-sm uppercase tracking-[0.15em]">{{ 'contactSection.eyebrow' | i18n(locale) }}</p>
     <h2 class="mx-auto mb-12 max-w-4xl text-5xl md:text-6xl leading-tight">
-      Pronto para tornar seu produto <span class="text-vista-blue italic">verdadeiramente</span> acessível?
+      {{ 'contactSection.title' | i18n(locale) }}<span class="text-vista-blue italic">{{ 'contactSection.titleItalic' | i18n(locale) }}</span>{{ 'contactSection.titleEnd' | i18n(locale) }}
     </h2>
     <a class="inline-flex items-center gap-4 pb-2 border-brand-red border-b-2 font-serif text-white hover:text-vista-blue text-3xl md:text-4xl transition-colors"
-      href="mailto:hello@brunopulis.com?subject='Tenho um projeto em mente'">
-      hello@brunopulis.com
+      href="mailto:{{ 'contactSection.email' | i18n(locale) }}?subject='{{ 'contactSection.mailSubject' | i18n(locale) }}'">
+      {{ 'contactSection.email' | i18n(locale) }}
     </a>
   </div>
 </section>

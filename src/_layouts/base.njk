@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-br" dir="ltr">
+<html lang="{{ 'pt-br' if locale === 'pt' else 'en' }}" dir="ltr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ title }} - Bruno Pulis</title>
-  <meta name="description" content="Engenheiro de acessibilidade digital" />
+  <title>{{ title }} - {{ 'site.name' | i18n(locale) }}</title>
+  <meta name="description" content="{{ description or ('site.seo.description' | i18n(locale)) }}" />
+  <link rel="alternate" hreflang="pt" href="https://brunopulis.com{{ page.url | replace('/en/', '/') }}" />
+  <link rel="alternate" hreflang="en" href="https://brunopulis.com{{ '/en' + page.url if locale === 'pt' else page.url }}" />
+  <link rel="alternate" hreflang="x-default" href="https://brunopulis.com{{ page.url | replace('/en/', '/') }}" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/index.css" />
 </head>
 <body>
-  <a href="#main-content" class="sr-only focus:not-sr-only">Ir para conteúdo principal</a>
+  <a href="#main-content" class="sr-only focus:not-sr-only">{{ 'header.skipLink' | i18n(locale) }}</a>
   {% include "partials/header.njk" %}
   <main id="main-content">
     {{ content | safe }}

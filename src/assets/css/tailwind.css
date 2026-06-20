@@ -53,7 +53,8 @@
   --color-light-silver-900: #1a1a1a;
   --color-light-silver-950: #0b0b0b;
 
-  --width-prose: 64ch;
+  --font-sans: 'Source Sans 3', sans-serif;
+  --font-serif: 'Noto Serif', serif;
 }
 
 @layer base {
@@ -62,10 +63,34 @@
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.6;
-    color: var(--color-errie-black-800);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    color: var(--color-errie-black-900);
     margin: 0;
+  }
+
+  .page-content a {
+    @apply font-bold text-blood-red-950 hover:text-blood-red-900 underline underline-offset-4 hover:no-underline;
+  }
+
+  .methodology__eyebrown {
+    @apply mb-4 font-bold text-vista-blue-800 text-sm uppercase tracking-[0.15em];
+  }
+
+  .methodology__card {
+    @apply pt-8 border-blood-red-950 border-t-4;
+  }
+
+  .methodology__steps {
+    @apply block mb-4 font-bold text-blood-red-950 text-sm uppercase;
+  }
+
+  .methodology__title {
+    @apply font-serif text-4xl;
+  }
+
+  .methodology__subtitle {
+    @apply mb-3 font-bold text-lg;
   }
 }
 
@@ -172,20 +197,20 @@
 
 .page-content p {
   margin-bottom: 1rem;
-  max-width: 65ch;
+  max-width: 85ch;
 }
 
 .page-content ul {
   margin-bottom: 1rem;
   padding-left: 1.5rem;
 }
-
-.page-content li {
+1 .page-content li {
   margin-bottom: 0.5rem;
 }
+
 .lead {
   font-size: 1.25rem;
-  color: #555;
+  color: var(--color-errie-black-900);
 }
 
 .services-grid,
