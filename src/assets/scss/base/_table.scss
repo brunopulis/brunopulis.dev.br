@@ -1,0 +1,38 @@
+/* 
+Table styles
+
+Ditch these styles altogether if not required for the website.
+*/
+
+/* Make sure table content scrolls horizontally when space no longer permits visiblity of full table */
+table {
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  overflow-x: scroll;
+  width: 100%;
+}
+
+/* Add border to all table cells and aligned content left */
+td,
+th {
+  border: var(--stroke);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+/* Give table header a background color */
+th {
+  background: var(--color-surface);
+  font-weight: bold;
+}
+
+/* Give all even table rows a background color */
+tr:nth-child(even) {
+  background: var(--color-surface);
+}
+
+/* Make sure table captions sit beneath the table */
+table caption {
+  padding: .5rem;
+  caption-side: bottom;
+}

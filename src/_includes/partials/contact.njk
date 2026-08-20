@@ -1,12 +1,15 @@
-<section class="bg-errie-black-900 px-8 py-32 text-white">
-  <div class="mx-auto max-w-7xl text-center">
-    <p class="mb-6 font-bold text-vista-blue text-sm uppercase tracking-[0.15em]">{{ 'contactSection.eyebrow' | i18n(locale) }}</p>
-    <h2 class="mx-auto mb-12 max-w-4xl text-5xl md:text-6xl leading-tight">
-      {{ 'contactSection.title' | i18n(locale) }}<span class="text-vista-blue italic">{{ 'contactSection.titleItalic' | i18n(locale) }}</span>{{ 'contactSection.titleEnd' | i18n(locale) }}
-    </h2>
-    <a class="inline-flex items-center gap-4 pb-2 border-brand-red border-b-2 font-serif text-white hover:text-vista-blue text-3xl md:text-4xl transition-colors"
-      href="mailto:{{ 'contactSection.email' | i18n(locale) }}?subject='{{ 'contactSection.mailSubject' | i18n(locale) }}'">
-      {{ 'contactSection.email' | i18n(locale) }}
-    </a>
+<section class="cta region" aria-labelledby="cta-title">
+  <div class="wrapper text-center">
+    <div class="flow">
+      <p class="eyebrow eyebrow--invert">{{ 'contactSection.eyebrow' | i18n(locale) }}</p>
+      <h2 class="cta__title" id="cta-title">
+        {{ 'contactSection.title' | i18n(locale) }}<span class="display-accent">{{ 'contactSection.titleItalic' | i18n(locale) }}</span>{{ 'contactSection.titleEnd' | i18n(locale) }}
+      </h2>
+      <p class="cta__email">
+        <a class="cta__email-link" href="mailto:{{ 'contactSection.email' | i18n(locale) }}?subject={{ 'contactSection.mailSubject' | i18n(locale) | urlencode }}">
+          {{ 'contactSection.email' | i18n(locale) }}
+        </a>
+      </p>
+    </div>
   </div>
 </section>

@@ -1,25 +1,17 @@
-<section class="px-8 py-24 methodology" aria-labelledby="methodology__title">
-  <div class="mx-auto max-w-7xl">
-    <div class="mx-auto mb-16 max-w-2xl text-center">
-      <p class="methodology__eyebrown">
-        {{ 'process.eyebrow' | i18n(locale) }}
-      </p>
-      <h2 class="methodology__title" id="methodology__title">
-        {{ 'process.title' | i18n(locale) }}
-      </h2>
+<section class="process region" aria-labelledby="process-title">
+  <div class="wrapper">
+    <div class="process__head flow text-center">
+      <p class="eyebrow">{{ 'process.eyebrow' | i18n(locale) }}</p>
+      <h2 class="process__title" id="process-title">{{ 'process.title' | i18n(locale) }}</h2>
     </div>
-    <div class="gap-8 grid md:grid-cols-4">
+    <ol class="process__list grid" role="list">
       {% for step in 'process.steps' | i18n(locale) %}
-      <article class="methodology__card">
-        <span class="methodology__steps">
-          {{ step.phase }}
-        </span>
-        <h3 class="methodology__subtitle">
-          {{ step.title }}
-        </h3>
+      <li class="process__step flow">
+        <p class="process__num">{{ step.phase }}</p>
+        <h3 class="process__heading">{{ step.title }}</h3>
         <p>{{ step.description }}</p>
-      </article>
+      </li>
       {% endfor %}
-    </div>
+    </ol>
   </div>
 </section>

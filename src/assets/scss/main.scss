@@ -1,0 +1,73 @@
+/*
+  Bruno Pulis — folha de estilos principal
+  Stack: Font Awesome 7 (webfonts self-hosted) + cu.css (CUBE CSS + Utopia) + tokens da marca.
+
+  Build: `npm run build:css` → sass --load-path=node_modules src/assets/scss/main.scss src/assets/css/index.css
+*/
+
+/* Font Awesome — webfonts copiados para /assets/webfonts pelo passthrough do Eleventy */
+@use '@fortawesome/fontawesome-free/scss/variables' with (
+  $font-path: '../webfonts',
+  $font-display: 'swap'
+);
+@use '@fortawesome/fontawesome-free/scss/fontawesome';
+@use '@fortawesome/fontawesome-free/scss/solid';
+@use '@fortawesome/fontawesome-free/scss/brands';
+
+/* Marca Bruno Pulis — fontes, tokens e componentes */
+@import 'brand/tokens';
+@import 'brand/components';
+
+/*
+* The variables/tokens (or whatever you
+* wish to call them) that power the rest of your styles
+*/
+@import 'abstracts/fonts';
+@import 'abstracts/space';
+@import 'abstracts/type';
+@import 'abstracts/theme';
+
+/*
+* Embrace the cascade and inheritance to
+* style as much as possible at a global level
+*/
+@import 'base/reset';
+@import 'base/global';
+@import 'base/form';
+@import 'base/code';
+@import 'base/details';
+@import 'base/table';
+@import 'base/button';
+@import 'base/nav';
+
+/*
+* Skeletal components or organisational structures.
+*/
+@import 'blocks/prose';
+@import 'blocks/hero';
+@import 'blocks/callout';
+@import 'blocks/card';
+@import 'blocks/skip-link';
+
+/*
+* High level, flexible layouts that provide a
+* skeleton to support any variant of a component
+*/
+@import 'compositions/flow';
+@import 'compositions/region';
+@import 'compositions/wrapper';
+@import 'compositions/grid';
+@import 'compositions/repel';
+@import 'compositions/cluster';
+@import 'compositions/sidebar';
+@import 'compositions/reel';
+@import 'compositions/switcher';
+@import 'compositions/frame';
+
+/*
+* Classes that do one job and one job well
+*/
+@import 'utilities/visually-hidden';
+@import 'utilities/width';
+@import 'utilities/text';
+@import 'utilities/center';

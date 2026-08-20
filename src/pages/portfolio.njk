@@ -5,22 +5,24 @@ title: 'Portfolio'
 description: 'Projetos de desenvolvimento acessível, consultoria e implementação de interfaces inclusivas.'
 ---
 
-<section class="page-content">
-  <div class="mx-auto px-8 max-w-7xl">
-    <h1 class="font-bold text-blood-red-950">{{ 'pages.portfolio.title' | i18n(locale) }}</h1>
-    <p class="lead">
-      {{ 'pages.portfolio.description' | i18n(locale) }}
-    </p>
-
-    <div class="portfolio-grid">
-      {% for project in 'pages.portfolio.projects' | i18n(locale) %}
-      <article class="bg-light-silver-100 project-card">
-        <div class="project-image"></div>
-        <h2>{{ project.title }}</h2>
-        <p>{{ project.description }}</p>
-        <a href="#" class="btn-link">{{ project.link }}</a>
-      </article>
-      {% endfor %}
+<section class="region">
+  <div class="wrapper">
+    <div class="flow prose">
+      <h1>{{ 'pages.portfolio.title' | i18n(locale) }}</h1>
+      <p class="lede">{{ 'pages.portfolio.description' | i18n(locale) }}</p>
     </div>
+    <ul class="portfolio__list grid" role="list">
+      {% for project in 'portfolioSection.projects' | i18n(locale) %}
+      <li class="card portfolio__card">
+        <div class="flow">
+          <p class="eyebrow eyebrow--sm">{{ project.category }}</p>
+          <h2 class="portfolio__card-title">
+            <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.name }}</a>
+          </h2>
+          <p class="portfolio__card-text">{{ project.description }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
 </section>

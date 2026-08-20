@@ -1,0 +1,32 @@
+/* 
+Code styles
+
+Used for inline code and code blocks
+
+Ditch these styles altogether if not required for the website.
+*/
+pre:has(code) {
+  background: var(--color-surface);
+  overflow: auto;
+  overflow-x: scroll;
+  overflow-wrap: normal;
+  padding: var(--space-xs-s);
+  margin: 0;
+}
+
+code {
+  background: var(--color-surface);
+  color: var(--color-accent);
+  font-size: 93%;
+  /* Carry over padding when code breaks multiple lines */
+  box-decoration-break: clone;
+}
+
+pre code {
+  color: var(--color-text);
+}
+
+p code,
+li code {
+  padding: .125rem .35rem;
+}

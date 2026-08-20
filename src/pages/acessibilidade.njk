@@ -5,26 +5,28 @@ title: 'Declaração de Acessibilidade'
 description: 'Compromisso com a inclusão digital e conformidade com as diretrizes de acessibilidade para a web.'
 ---
 
-<section class="page-content prose">
-  <div class="mx-auto px-8 max-w-7xl">
-    <h1 class="font-bold text-blood-red-950">{{ 'pages.accessibility.title' | i18n(locale) }}</h1>
-    <p class="lead">{{ 'pages.accessibility.description' | i18n(locale) }}</p>
+<section class="region">
+  <div class="wrapper">
+    <div class="flow prose">
+      <h1>{{ 'pages.accessibility.title' | i18n(locale) }}</h1>
+      <p class="lede">{{ 'pages.accessibility.description' | i18n(locale) }}</p>
 
-    {% for section in 'pages.accessibility.sections' | i18n(locale) %}
-    <h2 class="font-bold">{{ section.heading }}</h2>
-    <p>{{ section.text }}</p>
-    {% if section.items %}
-    <ul class="list-disc">
-      {% for item in section.items %}
-      <li>{{ item }}</li>
+      {% for section in 'pages.accessibility.sections' | i18n(locale) %}
+      <h2>{{ section.heading }}</h2>
+      <p>{{ section.text }}</p>
+      {% if section.items %}
+      <ul>
+        {% for item in section.items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% if section.contact %}
+      <p>{{ section.contact }}</p>
+      {% endif %}
       {% endfor %}
-    </ul>
-    {% endif %}
-    {% if section.contact %}
-    <p>{{ section.contact }}</p>
-    {% endif %}
-    {% endfor %}
 
-    <p><em>{{ 'pages.accessibility.lastUpdate' | i18n(locale) }}</em></p>
+      <p><em>{{ 'pages.accessibility.lastUpdate' | i18n(locale) }}</em></p>
+    </div>
   </div>
 </section>

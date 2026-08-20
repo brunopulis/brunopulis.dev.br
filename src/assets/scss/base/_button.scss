@@ -1,0 +1,91 @@
+/*
+Button styles
+
+Globally style the button element, submit, button and reset input.
+Include the .button class for styling <a> tags as buttons. 
+*/
+button,
+.button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  /* Configure focus and stroke color */
+  --focus-ring-color: var(--color-brand);
+  --stroke-color: var(--color-brand);
+
+  background-color: var(--color-brand);
+  border-width: var(--stroke-width);
+  border-style: var(--stroke-style);
+  border-color: var(--stroke-color);
+  border-radius: var(--radius);
+  color: var(--color-text-invert);
+  cursor: pointer;
+  display: inline-block;
+  padding: var(--space-3xs) var(--space-2xs);
+  text-decoration: none;
+  text-align: center;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="button"]:hover
+input[type="button"]:focus {
+  filter: brightness(1.2);
+  transform: translateY(-2px)
+}
+
+button:disabled,
+/* 
+For disabled link styles, used with role=link
+
+@link https://www.scottohara.me/blog/2021/05/28/disabled-links.html 
+*/
+.button[aria-disabled="true"],
+input[type="submit"]:disabled,
+input[type="reset"]:disabled, 
+input[type="button"]:disabled {
+  /* Configure stroke color */
+  --stroke-color: var(--color-surface-raised);
+
+  background-color: var(--color-surface-raised);
+  border-width: var(--stroke-width);
+  border-style: var(--stroke-style);
+  border-color: var(--stroke-color);
+  color: var(--color-text-subtle);
+  cursor: not-allowed;
+  transform: none;
+  filter: none;
+}
+
+/* 
+EXCEPTIONS
+
+Offer a variant button style
+
+@link https://cube.fyi/exception.html 
+*/
+button[data-variant='outline'],
+.button[data-variant='outline'],
+input[type="submit"][data-variant='outline'],
+input[type="reset"][data-variant='outline'],
+input[type="button"][data-variant='outline'] {
+  color: var(--color-brand);
+  background: var(--color-canvas);
+  border-width: var(--stroke-width);
+  border-style: var(--stroke-style);
+  border-color: var(--stroke-color);
+}
+
+button[data-variant='outline']:hover,
+.button[data-variant='outline']:hover,
+input[type="submit"][data-variant='outline']:hover,
+input[type="reset"][data-variant='outline']:hover,
+input[type="button"][data-variant='outline']:hover {
+  filter: brightness(1.2);
+}

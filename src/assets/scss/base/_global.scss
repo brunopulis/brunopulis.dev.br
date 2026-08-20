@@ -1,0 +1,219 @@
+/* 
+Global styles 
+
+Low-specificity, global styles that apply to the whole 
+project: https://cube.fyi/css.html
+*/
+
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  font-family: var(--font-base);
+  letter-spacing: var(--tracking);
+}
+
+/* Base typesetting */
+:is(h1, h2, h3) {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-compact);
+  letter-spacing: var(--tracking-compact);
+  max-width: var(--measure-compact);
+  text-wrap: balance;
+}
+
+h1,
+.h1 {
+  font-size: var(--font-size-2xl);
+}
+
+h2,
+.h2 {
+  font-size: var(--font-size-xl);
+}
+
+h3,
+.h3 {
+  font-size: var(--font-size-l);
+}
+
+h4,
+.h4 {
+  font-size: var(--font-size-m);
+}
+
+h5,
+.h5 {
+  font-size: var(--font-size-s);
+}
+
+h6,
+.h6 {
+  font-size: var(--font-size-xs);
+}
+
+/* Set line lengths */
+p,
+li,
+blockquote:not([class]) {
+  max-width: var(--measure-longform);
+}
+
+hr {
+  border: none;
+  border-top: 2px dotted;
+} 
+
+kbd {
+  --stroke-color: var(--color-surface-raised);
+  --stroke-width: 1px;
+
+  background-color: var(--color-surface);
+  border-width: var(--stroke-width);
+  border-style: var(--stroke-style);
+  border-color: var(--stroke-color);
+  font-family: var(--font-accent);
+  font-size: 1rem;
+  padding: .115rem .25rem;
+  }
+
+figcaption {
+  font-size: var(--font-size-meta);
+  margin-block-start: .5rem;
+  text-align: center;
+}
+
+small {
+  font-size: var(--font-size-meta);
+}
+
+/* More generic elements */
+blockquote:not([class]) {
+  border-left: solid 3px var(--color-text);
+  font-family: var(--font-display);
+  font-size: var(--font-size-lede);
+  line-height: var(--line-height-base);
+  padding-inline-start: var(--space-s);
+}
+
+/* Markdown blockquote’s aren't ideal, so we're presuming the person quoted is the last p, added within a cite or footer tag */
+blockquote:not([class]) p:last-of-type,
+blockquote:not([class]) cite,
+blockquote:not([class]) footer {
+  font-family: var(--font-base);
+  font-size: var(--font-size-base);
+  font-weight: normal;
+  margin-block-start: var(--space-2xs);
+}
+
+/* Add a default height (2 x base font x-height) and width for all classless SVG’s, then set a path fill */
+svg:not([class]) {
+  height: 2ex;
+  width: auto;
+
+  path {
+    fill: var(--color-text);
+  }
+}
+
+/* Prevent SVG’s in flex containers from shrinking */
+svg {
+  flex-shrink: 0;
+}
+
+/* If SVG has role “img” and a width and height, allow that width and height to control sizing */
+svg[role='img'][width][height] {
+  width: revert;
+  height: revert;
+}
+
+/* Remove default indent from lists */
+:is(ul, ol):not([class]) {
+  padding-inline-start: 1.7ch;
+}
+
+/* Remove padding and margin on ul, ol elements with a list role */
+[role='list'] {
+  margin: 0;
+  padding: 0;
+}
+
+/* Base interactive elements */
+a {
+  color: currentcolor;
+  color: var(--color-brand);
+}
+
+a:hover {
+  background-color: var(--color-brand);
+  color: var(--color-text-invert);
+  text-decoration: none;
+
+}
+
+/* Use naked variant to style links as regular text */
+a[data-variant="naked"] {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+/* Add underline when naked variant link state is hover or focus */
+a[data-variant="naked"]:hover,
+a[data-variant="naked"]:focus {
+  background-color: unset;
+  text-decoration-color: var(--text-decoration-color, currentColor);
+  text-decoration-line: var(--text-decoration-line, underline);
+  text-decoration-style: var(--text-decoration-style, solid);
+  text-decoration-thickness: var(--text-decoration-thickness, 2px);
+}
+
+/* Hide focus styles if they're not needed, for example, 
+when an element receives focus via the mouse. */
+:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+/* Show focus styles on keyboard focus. */
+:focus-visible {
+  outline-color: var(--focus-ring-color,currentColor);
+  outline-offset: var(--focus-ring-offset, 2px);
+  outline-style: var(--focus-ring-style, solid);
+  outline-width: var(--focus-ring-width, 2px);
+}
+
+/* Add scroll margin to all target elements 
+* See https://piccalil.li/quick-tip/add-scroll-margin-to-all-elements-which-can-be-targeted/
+*/
+:target {
+  scroll-margin-top: 2ex;
+}
+
+main:focus {
+  outline: none;
+}
+
+/* Add highlight styles */
+mark,
+::selection {
+  color: var(--color-text);
+  background-color: var(--color-highlight);
+  /* Reverse text colour in dark mode */
+  @media (prefers-color-scheme: dark) {
+    color: var(--color-canvas);
+  }
+}
+
+/* Decrease the brightness and contrast of images in dark mode */
+@media (prefers-color-scheme: dark) {
+  img,
+  picture {
+    filter: brightness(.8) contrast(1.2);
+  }
+}

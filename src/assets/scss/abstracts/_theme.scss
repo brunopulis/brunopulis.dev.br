@@ -1,0 +1,97 @@
+/*
+THEME tokens
+Includes primitive tokens for color and semantic tokens.
+*/
+:root {
+  /* --- Color primitives (derived from the brand) --- */
+  --color-dark: #171e1e; /* errie-black-900 — logo ink */
+  --color-dark-mod-1: #252c2c; /* errie-black-800 */
+  --color-dark-mod-2: #080c0c; /* errie-black-950 */
+  --color-dark-mod-3: #6b8080; /* errie-black-500 */
+
+  --color-light: #ffffff;
+  --color-light-mod-1: #fafafa; /* light-silver-50 */
+  --color-light-mod-2: #f5f5f5; /* light-silver-100 */
+  --color-light-mod-3: #d9d9d9; /* light-silver-300 */
+  --color-light-mod-4: #a3a3a3; /* light-silver-400 */
+  --color-light-mod-5: #727272; /* light-silver-500 */
+
+  --color-primary: #610404; /* blood-red-950 — marca */
+  --color-primary-mod: #8a1212; /* blood-red-900 */
+  --color-primary-tint: #f11111; /* blood-red-600 */
+  --color-secondary: #849cdb; /* vista-blue-500 */
+  --color-secondary-tint: #b4cced; /* vista-blue-300 */
+  --color-tertiary: #ffdfdf; /* blood-red-100 */
+  --color-tertiary-tint: #fff1f1; /* blood-red-50 */
+
+  /* --- Color semantic tokens --- */
+  --color-text: var(--color-dark);
+  --color-text-subtle: var(--color-dark-mod-3);
+  --color-text-invert: var(--color-light);
+  --color-paper: #d9d9d9;
+  --color-canvas: var(--color-light);
+  --color-surface: var(--color-light-mod-1);
+  --color-surface-raised: var(--color-light-mod-2);
+  --color-border: var(--color-light-mod-3);
+  --color-brand: var(--color-primary);
+  --color-brand-bright: var(--color-primary-tint);
+  --color-accent: var(--color-secondary);
+  --color-accent-text: #44538f; /* vista-blue-800 — legível sobre canvas claro */
+  --color-highlight: var(--color-tertiary);
+
+  /* Typography semantic tokens */
+  --font-base: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  --font-display: 'Noto Serif', Georgia, 'Times New Roman', serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --line-height-flat: 1;
+  --line-height-compact: 1.2;
+  --line-height-base: 1.5;
+  --line-height-loose: 1.7;
+
+  --measure-compact: 35ch;
+  --measure-longform: 65ch;
+  --tracking: -0.04ch;
+  --tracking-compact: -0.05ch;
+  --text-decoration-color: currentColor;
+  --text-decoration-line: underline;
+  --text-decoration-style: solid;
+  --text-decoration-thickness: 2px;
+
+  /* UI semantic tokens */
+  --gutter: var(--space-s-m);
+  --focus-ring-width: 2px;
+  --focus-ring-color: currentColor;
+  --focus-ring-offset: 2px;
+  --focus-ring-style: dotted;
+  --stroke-style: solid; // Use stroke tokens for borders, outlines, SVG paths etc
+  --stroke-width: 0.1rem;
+  --stroke-color: var(--color-border, currentColor);
+  --radius: 0; // Set a rem value to add border radius to buttons, form elements, callouts and accordians.
+  --shadow: 0px 3px 7px rgba(0, 0, 0, 0.08), 0px 0px 1px rgba(0, 0, 0, 0.025);
+}
+
+/*
+DARK MODE
+If theme doesn’t require system preferences dark mode then remove everything below.
+*/
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    // --color-theme: dark;
+    --color-text: var(--color-light-mod-3);
+    --color-text-subtle: var(--color-light-mod-5);
+    --color-text-invert: var(--color-dark);
+    --color-canvas: var(--color-dark);
+    --color-surface: var(--color-dark-mod-1);
+    --color-surface-raised: var(--color-dark-mod-2);
+    --color-border: var(--color-light-mod-3);
+    --color-brand: var(--color-primary-tint);
+    --color-accent: var(--color-secondary-tint);
+    --color-highlight: var(--color-tertiary-tint);
+    --text-decoration-color: currentColor;
+    --focus-ring-color: currentColor;
+    --stroke-color: currentColor;
+  }
+}

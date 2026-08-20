@@ -1,32 +1,28 @@
-<section class="bg-light-silver-100 px-8 py-24" aria-labelledby="results-title">
-  <div class="mx-auto max-w-7xl">
-    <div class="flex md:flex-row flex-col justify-between items-end gap-8 mb-16">
-      <div class="max-w-xl">
-        <p class="mb-4 font-bold text-vista-blue-800 text-sm uppercase tracking-[0.15em]">{{ 'portfolioSection.eyebrow' | i18n(locale) }}</p>
-        <h2 class="font-serif text-4xl" id="results-title">{{ 'portfolioSection.title' | i18n(locale) }}<span class="text-blood-red-950 italic">{{ 'portfolioSection.titleItalic' | i18n(locale) }}</span></h2>
+<section class="portfolio region" aria-labelledby="portfolio-title">
+  <div class="wrapper">
+    <div class="repel">
+      <div class="portfolio__head flow">
+        <p class="eyebrow">{{ 'portfolioSection.eyebrow' | i18n(locale) }}</p>
+        <h2 class="portfolio__title" id="portfolio-title">
+          {{ 'portfolioSection.title' | i18n(locale) }}<span class="display-accent">{{ 'portfolioSection.titleItalic' | i18n(locale) }}</span>
+        </h2>
       </div>
-      <a class="group flex items-center gap-2 font-bold text-blood-red-950 underline" href="{{ '/en/portfolio' if locale === 'en' else '/portfolio' }}">
+      <a class="button" data-variant="outline" href="{{ '/en/portfolio' if locale === 'en' else '/portfolio' }}">
         {{ 'portfolioSection.cta' | i18n(locale) }}
       </a>
     </div>
-    <div class="gap-8 grid md:grid-cols-3">
+    <ul class="portfolio__list grid" role="list">
       {% for project in 'portfolioSection.projects' | i18n(locale) %}
-      <article class="group bg-white rounded-lg overflow-hidden">
-        <div class="bg-zinc-200 aspect-video overflow-hidden">
-          <img alt="{{ project.imgAlt }}"
-            class="grayscale group-hover:grayscale-0 w-full h-full object-cover transition-all duration-500"
-            data-alt="{{ project.imgAlt }}"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp9DrO20TEnpvkwtbGd7ZIvb9MWQovyrxtE_uJkFoaSGXVFJaR7d8dzzVB403_c2Hn1cF0hLC-6iYETfQh3BGmzfqRIRSl56zw3Z7yoDvBIYcw72ytsuawT09iFLkIhxqu1mP578k9KJeCcsQ_azWCh29-MToHQVOOdTZGENr-GtYPRWvyAJvadyhZOWNhoYBCHO69rPB_8Vj6c_gtWalm1ZkYFyZgX6iDpiJkwVq5EhlyN811GHnHQyOcaswVg9OuyGX7Z79E_Jg">
-        </div>
-        <div class="p-8">
-          <p class="mb-2 font-bold text-vista-blue text-xs uppercase">{{ project.category }}</p>
-          <h3 class="mb-4 font-bold text-xl">
-            <a href="http://" class="underline hover:no-underline">{{ project.name }}</a>
+      <li class="card portfolio__card">
+        <div class="flow">
+          <p class="eyebrow eyebrow--sm">{{ project.category }}</p>
+          <h3 class="portfolio__card-title">
+            <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.name }}</a>
           </h3>
-          <p class="mb-6 font-light text-zinc-600 text-sm">{{ project.description }}</p>
+          <p class="portfolio__card-text">{{ project.description }}</p>
         </div>
-      </article>
+      </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </section>

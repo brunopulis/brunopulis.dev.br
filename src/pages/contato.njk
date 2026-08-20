@@ -5,61 +5,60 @@ title: 'Contato'
 description: 'Estou disponível para projetos de consultoria, auditoria e desenvolvimento acessível. Vamos conversar!'
 ---
 
-<section class="page-content">
-  <div class="mx-auto px-8 max-w-7xl">
-    <h1 class="font-bold text-blood-red-950">
-      {{ 'pages.contact.title' | i18n(locale) }}
-    </h1>
+<section class="region">
+  <div class="wrapper">
+    <div class="contact__head flow">
+      <p class="eyebrow">{{ 'pages.contact.title' | i18n(locale) }}</p>
+      <h1 class="contact__title">{{ 'pages.contact.description' | i18n(locale) }}</h1>
+    </div>
 
-    <p class="lead">
-      {{ 'pages.contact.description' | i18n(locale) }}
-    </p>
+    <div class="sidebar" style="--sidebar-target-width: 18rem; margin-block-start: var(--space-l-xl);">
+      <div>
+        <p class="contact__group-label">Direct contact</p>
+        <div class="contact__channels flow">
+          <div class="contact__channel">
+            <p class="contact__channel-label">Email</p>
+            <a href="mailto:hello@brunopulis.com">{{ 'pages.contact.email' | i18n(locale) }}</a>
+          </div>
+          <div class="contact__channel">
+            <p class="contact__channel-label">WhatsApp</p>
+            <a href="tel:5531973438008">{{ 'pages.contact.whatsapp' | i18n(locale) }}</a>
+          </div>
+        </div>
+      </div>
 
-    <ul class="list-disc">
-      <li>
-        <a href="mailto:hello@brunopulis.com" class="text-xl underline underline-offset-4 hover:no-underline">
-          {{ 'pages.contact.email' | i18n(locale) }}
-        </a>
-      </li>
-      <li>
-        <a href="tel:5531973438008" class="text-xl underline underline-offset-4 hover:no-underline">
-          {{ 'pages.contact.whatsapp' | i18n(locale) }}
-        </a>
-      </li>
-      <li>
-        <a href="https://linkedin.com/in/pulis" rel="me noopener noreferrer" target="_blank" class="text-xl underline underline-offset-4 hover:no-underline">
-          {{ 'pages.contact.linkedin' | i18n(locale) }}
-        </a>
-      </li>
-      <li>
-        <a href="https://mastodon.social/@brunopulis" rel="me noopener noreferrer" target="_blank" class="text-xl underline underline-offset-4 hover:no-underline">
-          {{ 'pages.contact.mastodon' | i18n(locale) }}
-        </a>
-      </li>
-      <li>
-        <a href="https://bsky.app/profile/brunopulis.com" rel="me noopener noreferrer" target="_blank" class="text-xl underline underline-offset-4 hover:no-underline">
-          {{ 'pages.contact.bluesky' | i18n(locale) }}
-        </a>
-      </li>
-    </ul>
+      <div>
+        <p class="contact__group-label">Social</p>
+        <div class="contact__channels flow">
+          <div class="contact__channel">
+            <p class="contact__channel-label">LinkedIn</p>
+            <a href="https://linkedin.com/in/pulis" rel="me noopener noreferrer" target="_blank">{{ 'pages.contact.linkedin' | i18n(locale) }}</a>
+          </div>
+          <div class="contact__channel">
+            <p class="contact__channel-label">Mastodon</p>
+            <a href="https://mastodon.social/@brunopulis" rel="me noopener noreferrer" target="_blank">{{ 'pages.contact.mastodon' | i18n(locale) }}</a>
+          </div>
+          <div class="contact__channel">
+            <p class="contact__channel-label">Bluesky</p>
+            <a href="https://bsky.app/profile/brunopulis.com" rel="me noopener noreferrer" target="_blank">{{ 'pages.contact.bluesky' | i18n(locale) }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <div class="contact-info">
-      <h2 class="font-bold text-blood-red-950">{{ 'pages.contact.sectionTitle' | i18n(locale) }}</h2>
-
+    <div class="contact__scheduling">
+      <h2>{{ 'pages.contact.sectionTitle' | i18n(locale) }}</h2>
       <p>{{ 'pages.contact.scheduleText' | i18n(locale) }}</p>
-      <ul class="list-disc">
-        <li>
-          <a href="https://adplist.org/mentors/bruno-pulis" rel="me noopener noreferrer" target="_blank" class="text-xl underline underline-offset-4 hover:no-underline">
-            {{ 'pages.contact.adplist' | i18n(locale) }}
-          </a>
-        </li>
-        <li>
-          <a href="https://cal.com/brunopulis/consultoria?overlayCalendar=true" rel="me noopener noreferrer" target="_blank" class="text-xl underline underline-offset-4 hover:no-underline">
-            {{ 'pages.contact.mentoring' | i18n(locale) }}
-          </a>
-        </li>
-      </ul>
-
+      <div class="contact__channels flow">
+        <div class="contact__channel">
+          <p class="contact__channel-label">ADPList</p>
+          <a href="https://adplist.org/mentors/bruno-pulis" rel="me noopener noreferrer" target="_blank">{{ 'pages.contact.adplist' | i18n(locale) }}</a>
+        </div>
+        <div class="contact__channel">
+          <p class="contact__channel-label">Mentoring</p>
+          <a href="https://cal.com/brunopulis/consultoria?overlayCalendar=true" rel="me noopener noreferrer" target="_blank">{{ 'pages.contact.mentoring' | i18n(locale) }}</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>

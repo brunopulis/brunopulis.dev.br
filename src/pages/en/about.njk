@@ -5,20 +5,22 @@ title: 'About'
 description: 'I help organizations make their digital products, processes, and culture more accessible and usable.'
 ---
 
-<section class="page-content">
-  <div class="mx-auto px-8 max-w-7xl">
-    <h1 class="font-bold text-blood-red-950">{{ 'pages.about.title' | i18n(locale) }}</h1>
-    <p class="lead">{{ 'pages.about.lead' | i18n(locale) }}</p>
+<section class="region">
+  <div class="wrapper">
+    <div class="flow prose">
+      <h1>{{ 'pages.about.title' | i18n(locale) }}</h1>
+      <p class="lede">{{ 'pages.about.lead' | i18n(locale) }}</p>
 
-    <h2>{{ 'pages.about.journeyTitle' | i18n(locale) }}</h2>
-    <p>{{ 'pages.about.journeyP1' | i18n(locale) }}</p>
-    <p>{{ 'pages.about.journeyP2' | i18n(locale) }}</p>
+      <h2>{{ 'pages.about.journeyTitle' | i18n(locale) }}</h2>
+      <p>{{ 'pages.about.journeyP1' | i18n(locale) }}</p>
+      <p>{{ 'pages.about.journeyP2' | i18n(locale) }}</p>
 
-    <h2>{{ 'pages.about.valuesTitle' | i18n(locale) }}</h2>
-    <ul class="list-disc">
-      {% for value in 'pages.about.values' | i18n(locale) %}
-      <li>{{ value }}</li>
-      {% endfor %}
-    </ul>
+      <h2>{{ 'pages.about.valuesTitle' | i18n(locale) }}</h2>
+      <ul>
+        {% for value in 'pages.about.values' | i18n(locale) %}
+        <li>{{ value }}</li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </section>

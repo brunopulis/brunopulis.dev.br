@@ -5,22 +5,20 @@ title: 'Palestras'
 description: 'Palestras e apresentações sobre acessibilidade digital, design inclusivo e desenvolvimento web acessível.'
 ---
 
-<section class="page-content">
-  <div class="mx-auto px-8 max-w-7xl">
-    <h1>{{ 'pages.talks.title' | i18n(locale) }}</h1>
-    <p class="lead">
-      {{ 'pages.talks.description' | i18n(locale) }}
-    </p>
-
-    <div class="talks-list">
-      {% for talk in 'pages.talks.talks' | i18n(locale) %}
-      <article class="mb-4 talk-card">
-        <span class="talk-type">{{ talk.type }}</span>
-        <h2>{{ talk.title }}</h2>
-        <p>{{ talk.description }}</p>
-        <a href="#" class="btn-link">{{ 'pages.talks.link' | i18n(locale) }}</a>
-      </article>
-      {% endfor %}
+<section class="region">
+  <div class="wrapper">
+    <div class="flow prose">
+      <h1>{{ 'pages.talks.title' | i18n(locale) }}</h1>
+      <p class="lede">{{ 'pages.talks.description' | i18n(locale) }}</p>
     </div>
+    <ol class="talks grid" role="list">
+      {% for talk in 'pages.talks.talks' | i18n(locale) %}
+      <li class="talk">
+        <p class="eyebrow eyebrow--sm">{{ talk.type }}</p>
+        <h2 class="talk__title">{{ talk.title }}</h2>
+        <p class="talk__text">{{ talk.description }}</p>
+      </li>
+      {% endfor %}
+    </ol>
   </div>
 </section>

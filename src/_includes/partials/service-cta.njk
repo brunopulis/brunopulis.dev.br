@@ -1,17 +1,18 @@
-<section class="bg-light-silver-100 p-8">
-  <h2 class="font-serif font-bold text-blood-red-950">
-    {{ 'serviceCta.title' | i18n(locale) }}
-  </h2>
-
-  <p>{{ 'serviceCta.text' | i18n(locale) }}</p>
-  <p>
-    <a href="{{ '/en/contact' if locale === 'en' else '/contato' }}">
-      {{ 'serviceCta.cta' | i18n(locale) }}
-    </a>
-
-    {{ '' if locale === 'en' else 'ou me mande uma mensagem' }}
-    <a href="https://linkedin.com/in/pulis">
-      {{ 'serviceCta.ctaLinkedin' | i18n(locale) }}
-    </a>.
-  </p>
+<section class="region">
+  <div class="wrapper">
+    <div class="callout" data-variant="brand">
+      <div class="flow">
+        <h2>{{ 'serviceCta.title' | i18n(locale) }}</h2>
+        <p>{{ 'serviceCta.text' | i18n(locale) }}</p>
+        <p class="cluster">
+          <a class="button" href="{{ '/en/contact' if locale === 'en' else '/contato' }}">
+            {{ 'serviceCta.cta' | i18n(locale) }}
+          </a>
+          {% if locale === 'pt' %}<span>ou me mande uma mensagem no</span>
+          <a class="link-arrow" href="https://linkedin.com/in/pulis" target="_blank" rel="noopener noreferrer">{{ 'serviceCta.ctaLinkedin' | i18n(locale) }}</a>
+          {% endif %}
+        </p>
+      </div>
+    </div>
+  </div>
 </section>

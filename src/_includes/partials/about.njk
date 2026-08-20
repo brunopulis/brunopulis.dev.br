@@ -1,43 +1,21 @@
-<section class="bg-light-silver-100 px-8 py-24">
-  <div class="mx-auto max-w-7xl">
-    <div class="items-start gap-16 grid md:grid-cols-2">
-      <div class="space-y-6">
-        <p class="font-bold text-vista-blue-800 text-sm uppercase tracking-[0.15em]">{{ 'about.eyebrow' | i18n(locale) }}</p>
-        <h2 class="text-4xl leading-snug">{{ 'about.title' | i18n(locale) }}<span class="italic">{{ 'about.titleItalic' | i18n(locale) }}</span>
+<section class="about region" aria-labelledby="about-title">
+  <div class="wrapper">
+    <div class="grid about__grid" data-layout="50-50">
+      <div class="about__intro flow">
+        <p class="eyebrow">{{ 'about.eyebrow' | i18n(locale) }}</p>
+        <h2 class="about__title" id="about-title">
+          {{ 'about.title' | i18n(locale) }}<span class="display-accent">{{ 'about.titleItalic' | i18n(locale) }}</span>
         </h2>
-        <p class="font-light text-errie-black-900 text-lg leading-relaxed">
-          {{ 'about.text' | i18n(locale) | safe }}
-        </p>
+        <p class="about__text">{{ 'about.text' | i18n(locale) | safe }}</p>
       </div>
-
-      <div class="gap-8 grid grid-cols-2">
-        <article class="bg-white shadow-sm p-6 rounded-lg">
-          <h3 class="mb-2 font-serif text-blood-red-950 text-4xl">
-            {{ ('about.stats.experience.value' | i18n(locale)) }}
-          </h3>
-          <p class="font-bold text-errie-black-900 text-sm uppercase tracking-wider">
-            {{ ('about.stats.experience.label' | i18n(locale)) }}
-          </p>
-        </article>
-        <article class="bg-white shadow-sm p-6 rounded-lg">
-          <h3 class="mb-2 font-serif text-blood-red-950 text-4xl">{{ 'about.stats.projects.value' | i18n(locale) }}</h3>
-          <p class="font-bold text-errie-black-900 text-sm uppercase">
-            {{ 'about.stats.projects.label' | i18n(locale) }}
-          </p>
-        </article>
-        <article class="bg-white shadow-sm p-6 rounded-lg">
-          <h3 class="mb-2 font-serif text-blood-red-950 text-4xl">{{ 'about.stats.focus.value' | i18n(locale) }}</h3>
-          <p class="font-bold text-errie-black-900 text-sm uppercase">
-            {{ 'about.stats.focus.label' | i18n(locale) }}
-          </p>
-        </article>
-        <article class="bg-white shadow-sm p-6 rounded-lg">
-          <h3 class="mb-2 font-serif text-blood-red-950 text-4xl">{{ 'about.stats.standard.value' | i18n(locale) }}</h3>
-          <p class="font-bold text-errie-black-900 text-sm uppercase">
-            {{ 'about.stats.standard.label' | i18n(locale) }}
-          </p>
-        </article>
-      </div>
+      <ul class="stats" role="list">
+        {% for stat in ['experience', 'projects', 'focus', 'standard'] %}
+        <li class="stat">
+          <p class="stat__value">{{ ('about.stats.' + stat + '.value') | i18n(locale) }}</p>
+          <p class="stat__label">{{ ('about.stats.' + stat + '.label') | i18n(locale) }}</p>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </section>

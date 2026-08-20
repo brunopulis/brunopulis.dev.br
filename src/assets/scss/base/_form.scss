@@ -1,0 +1,127 @@
+/* 
+Form styles
+
+Ditch these styles altogether if not required for the website.
+*/
+
+fieldset {
+  border-width: var(--stroke-width);
+  border-style: var(--stroke-style);
+  border-color: var(--stroke-color);
+}
+
+legend {
+  font-weight: var(--font-weight-bold);
+}
+
+label {
+  display: block;
+  margin-block: var(--space-3xs);
+}
+
+form button {
+  display: block;
+  margin-block-start: var(--space-xs);
+}
+
+:is(input:not([type="checkbox"], [type="radio"], [type="color"]), select, textarea) {
+  background: var(--color-canvas);
+  border-width: var(--stroke-width);
+  border-style: var(--stroke-style);
+  border-color: var(--stroke-color);
+  border-radius: var(--radius);
+  box-shadow: none;
+  color: var(--color-text);
+  letter-spacing: -.5px;
+  padding: var(--space-3xs) var(--space-2xs);
+}
+
+:is(input[type="submit"], input[type="checkbox"], input[type="radio"]), select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+}
+
+/* Chevron for select */
+select:not([multiple]) {
+  background-image: linear-gradient(45deg, transparent 49%, var(--color-text) 51%), linear-gradient(135deg, var(--color-text) 51%, transparent 49%);
+  background-position: calc(100% - 16px), calc(100% - 11px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  padding-inline-end: 2rem;
+}
+
+/* checkbox and radio button style */
+input[type="checkbox"],
+input[type="radio"] {
+  border-width: var(--stroke-width);
+  border-style: var(--stroke-style);
+  border-color: var(--stroke-color);
+  padding: var(--space-2xs);
+  vertical-align: middle;
+  position: relative;
+  width: min-content;
+  margin-inline-start: 0;
+  margin-inline-end: .25rem;
+  margin-block-end: .3rem;
+}
+
+input[type="checkbox"] {
+  border-radius: var(--radius);
+}
+
+input[type="radio"] {
+  border-radius: 100%;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  /* Configure stroke color */
+  --stroke-color: var(--color-brand);
+  --focus-ring-color: var(--color-brand);
+
+  border-width: var(--stroke-width);
+  border-style: var(--stroke-style);
+  border-color: var(--stroke-color);
+  background-color: var(--color-brand);
+}
+
+input[type="checkbox"]:checked::after {
+  /* Creates a rectangle with colored right and bottom borders which is rotated to look like a check mark */
+  content: " ";
+  width: .17em;
+  height: .32em;
+  border-radius: 0;
+  position: absolute;
+  top: .06em;
+  left: .16em;
+  background-color: transparent;
+  border-right: solid var(--color-canvas) .07em;
+  border-bottom: solid var(--color-canvas) .07em;
+  font-size: 2em;
+  transform: rotate(45deg);
+}
+
+input[type="radio"]:checked::after {
+  /* creates a colored circle for the checked radio button  */
+  content: " ";
+  width: .25em;
+  height: .25em;
+  border-radius: 100%;
+  position: absolute;
+  top: .13em;
+  background-color: var(--color-canvas);
+  left: .13em;
+  font-size: 2em;
+}
+
+input:disabled {
+  background: var(--color-surface-raised);
+}
+
+/* Give user a visual hint that the element is disabled */
+input:disabled,
+label input:disabled + * {
+  cursor: not-allowed;
+}

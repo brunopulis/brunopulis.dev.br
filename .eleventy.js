@@ -1,5 +1,3 @@
-const fs = require('fs');
-const path = require('path');
 const { createRequire } = require('module');
 const rssModule = createRequire(__filename)('@11ty/eleventy-plugin-rss');
 const pluginRss = rssModule.default || rssModule;
@@ -10,6 +8,9 @@ const en = require('./src/_data/i18n/en.json');
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/assets');
   eleventyConfig.addPassthroughCopy('src/public');
+  eleventyConfig.addPassthroughCopy({
+    'node_modules/@fortawesome/fontawesome-free/webfonts': 'assets/webfonts'
+  });
 
   eleventyConfig.addPlugin(pluginRss);
 
@@ -29,6 +30,21 @@ module.exports = function (eleventyConfig) {
       .replace(/<svg[^>]*>/, '')
       .replace('</svg>', '')
       .trim();
+  });
+
+  // Mapeia nomes de ícones usados no i18n (herdados do lucide) para classes do Font Awesome 7.
+  const faIcons = {
+    'fast-forward': 'fa-forward',
+    'file-text': 'fa-file-lines',
+    'book-open': 'fa-book-open',
+    users: 'fa-users',
+    presentation: 'fa-presentation-screen',
+    'shield-check': 'fa-shield-halved',
+    'arrow-right': 'fa-arrow-right'
+  };
+
+  eleventyConfig.addFilter('faIcon', function (name) {
+    return faIcons[name] || 'fa-circle';
   });
 
   eleventyConfig.addFilter('i18n', function (key, locale) {

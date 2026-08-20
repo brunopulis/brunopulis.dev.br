@@ -2,11 +2,14 @@
   "site": {
     "name": "Bruno Pulis",
     "role": "Accessibility Engineer.",
-    "seo": {"description": "Digital accessibility engineer"}
+    "seo": {
+      "description": "Digital accessibility engineer"
+    }
   },
   "nav": {
     "servicos": "Services",
     "portfolio": "Portfolio",
+    "courses": "Cursos",
     "sobre": "About",
     "contato": "Contact",
     "palestras": "Talks"
@@ -14,7 +17,8 @@
   "header": {
     "skipLink": "Skip to main content",
     "search": "Search",
-    "rss": "RSS Feed"
+    "rss": "RSS Feed",
+    "navLabel": "Main navigation"
   },
   "hero": {
     "eyebrow": "Accessibility Specialist",
@@ -31,10 +35,22 @@
     "titleItalic": "human experience.",
     "text": "I believe technology should be <strong>invisible</strong> and <strong>universal</strong>. Over a decade, I've been refining development methodologies that prioritize semantics and end-user autonomy, regardless of their functional capabilities.",
     "stats": {
-      "experience": {"value": "10+ years", "label": "of experience"},
-      "projects": {"value": "50+", "label": "Projects delivered"},
-      "focus": {"value": "100%", "label": "Focus on inclusion"},
-      "standard": {"value": "WCAG 2.2", "label": "As compliance standard"}
+      "experience": {
+        "value": "10+ years",
+        "label": "of experience"
+      },
+      "projects": {
+        "value": "50+",
+        "label": "Projects delivered"
+      },
+      "focus": {
+        "value": "100%",
+        "label": "Focus on inclusion"
+      },
+      "standard": {
+        "value": "WCAG 2.2",
+        "label": "As compliance standard"
+      }
     }
   },
   "servicesSection": {
@@ -100,22 +116,25 @@
     "cta": "View full portfolio",
     "projects": [
       {
-        "category": "SaaS Platform",
-        "name": "Reponto",
-        "description": "Centralized accessibility for large-scale human resources management.",
-        "imgAlt": "Reponto Project"
+        "imgAlt": "Content Portal Project",
+        "category": "Web Portal",
+        "name": "Content Portal",
+        "url": "https://mbjmc.org.br/alumni/marcobrasileiro/",
+        "description": "Institutional content portal focused on accessibility and usability."
       },
       {
+        "imgAlt": "Management System Project",
+        "category": "Web System",
+        "name": "Management System",
+        "url": "https://mbjmc.org.br/alumni/marcobrasileiro/",
+        "description": "Web system for data management with accessible tables and complete keyboard navigation."
+      },
+      {
+        "imgAlt": "Accessible E-commerce Project",
         "category": "E-commerce",
-        "name": "Mone de França",
-        "description": "Fluid and inclusive shopping experience for a premium fashion brand.",
-        "imgAlt": "Mone de França Project"
-      },
-      {
-        "category": "Professional Portfolio",
-        "name": "João Kioshi",
-        "description": "Redesign focused on technical performance and full interface accessibility.",
-        "imgAlt": "João Kioshi Project"
+        "name": "Accessible E-commerce",
+        "url": "https://mbjmc.org.br/alumni/marcobrasileiro/",
+        "description": "Online store with accessible checkouts, visible focus and keyboard navigation."
       }
     ]
   },
@@ -181,7 +200,9 @@
     }
   ],
   "pages": {
-    "home": {"title": "Home"},
+    "home": {
+      "title": "Home"
+    },
     "about": {
       "title": "About",
       "description": "I help organizations make their digital products, processes, and culture more accessible and usable.",
@@ -200,9 +221,21 @@
       "title": "Portfolio",
       "description": "Accessible development projects, consulting, and inclusive interface implementation.",
       "projects": [
-        {"title": "Project 01", "description": "Project description.", "link": "View project →"},
-        {"title": "Project 02", "description": "Project description.", "link": "View project →"},
-        {"title": "Project 03", "description": "Project description.", "link": "View project →"}
+        {
+          "title": "Project 01",
+          "description": "Project description.",
+          "link": "View project →"
+        },
+        {
+          "title": "Project 02",
+          "description": "Project description.",
+          "link": "View project →"
+        },
+        {
+          "title": "Project 03",
+          "description": "Project description.",
+          "link": "View project →"
+        }
       ]
     },
     "talks": {

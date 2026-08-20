@@ -1,25 +1,18 @@
-<section class="bg-blood-red-950 px-8 py-24 text-white" aria-labelledby="services-title">
-  <div class="mx-auto max-w-7xl">
-    <h2 class="mb-16 font-serif text-4xl md:text-5xl" id="services-title">
-      {{ 'servicesSection.title' | i18n(locale) }}
-    </h2>
-
-    <div class="gap-1 grid md:grid-cols-3">
+<section class="services region" aria-labelledby="services-title">
+  <div class="wrapper">
+    <h2 class="services__title" id="services-title">{{ 'servicesSection.title' | i18n(locale) }}</h2>
+    <ul class="services__list grid" role="list">
       {% for item in 'servicesSection.items' | i18n(locale) %}
-      <article class="group hover:bg-white/10 p-8 transition-all">
-        <h3 class="mb-4 font-bold text-xl">
-          {{ item.title }}
-        </h3>
-        <p class="text-white leading-relaxed">
-          {{ item.description }}
-        </p>
-      </article>
+      <li class="service">
+        <h3 class="service__title">{{ item.title }}</h3>
+        <p class="service__text">{{ item.description }}</p>
+      </li>
       {% endfor %}
-    </div>
-  </div>
-  <div class="flex justify-center items-center py-4">
-    <a href="{{ '/en/services' if locale === 'en' else '/servicos' }}" class="focus:ring-2 focus:ring-errie-black-950 focus:ring-offset-font-bold text-white text-xl underline underline-offset-8 hover:no-underline transition-all">
-      {{ 'servicesSection.cta' | i18n(locale) }}
-    </a>
+    </ul>
+    <p class="services__cta">
+      <a class="button" data-variant="outline" href="{{ '/en/services' if locale === 'en' else '/servicos' }}">
+        {{ 'servicesSection.cta' | i18n(locale) }}
+      </a>
+    </p>
   </div>
 </section>

@@ -5,18 +5,20 @@ title: 'Termos de Uso'
 description: 'Condições gerais para navegação e utilização do site Bruno Pulis.'
 ---
 
-<section class="page-content">
-  <div class="mx-auto px-8 max-w-7xl">
-    <h1 class="font-bold text-blood-red-950">{{ 'pages.terms.title' | i18n(locale) }}</h1>
-    <p class="lead">{{ 'pages.terms.description' | i18n(locale) }}</p>
+<section class="region">
+  <div class="wrapper">
+    <div class="flow prose">
+      <h1>{{ 'pages.terms.title' | i18n(locale) }}</h1>
+      <p class="lede">{{ 'pages.terms.description' | i18n(locale) }}</p>
 
-    {% for section in 'pages.terms.sections' | i18n(locale) %}
-    <h2 class="font-bold">{{ section.heading }}</h2>
-    {% if section.text %}<p>{{ section.text }}</p>{% endif %}
-    {% if section.text1 %}<p>{{ section.text1 }}</p>{% endif %}
-    {% if section.text2 %}<p>{{ section.text2 }}</p>{% endif %}
-    {% endfor %}
+      {% for section in 'pages.terms.sections' | i18n(locale) %}
+      <h2>{{ section.heading }}</h2>
+      {% if section.text %}<p>{{ section.text }}</p>{% endif %}
+      {% if section.text1 %}<p>{{ section.text1 }}</p>{% endif %}
+      {% if section.text2 %}<p>{{ section.text2 }}</p>{% endif %}
+      {% endfor %}
 
-    <p><em>{{ 'pages.terms.lastUpdate' | i18n(locale) }}</em></p>
+      <p><em>{{ 'pages.terms.lastUpdate' | i18n(locale) }}</em></p>
+    </div>
   </div>
 </section>

@@ -2,11 +2,14 @@
   "site": {
     "name": "Bruno Pulis",
     "role": "Engenheiro de Acessibilidade.",
-    "seo": {"description": "Engenheiro de acessibilidade digital"}
+    "seo": {
+      "description": "Engenheiro de acessibilidade digital"
+    }
   },
   "nav": {
     "servicos": "Serviços",
     "portfolio": "Portfolio",
+    "courses": "Cursos",
     "sobre": "Sobre",
     "contato": "Contato",
     "palestras": "Palestras"
@@ -14,7 +17,8 @@
   "header": {
     "skipLink": "Ir para conteúdo principal",
     "search": "Pesquisar",
-    "rss": "Feed RSS"
+    "rss": "Feed RSS",
+    "navLabel": "Navegação principal"
   },
   "hero": {
     "eyebrow": "Especialista em acessibilidade",
@@ -31,10 +35,22 @@
     "titleItalic": "experiência humana.",
     "text": "Acredito que a tecnologia deve ser <strong>invisível</strong> e <strong>universal</strong>. Ao longo de uma década, venho refinando metodologias de desenvolvimento que priorizam a semântica e a autonomia do usuário final, independentemente de suas capacidades funcionais.",
     "stats": {
-      "experience": {"value": "10 anos", "label": "de experiência"},
-      "projects": {"value": "Mais de 50", "label": "Projetos entregues"},
-      "focus": {"value": "100%", "label": "Foco em inclusão"},
-      "standard": {"value": "WCAG 2.2", "label": "Como padrão de conformidade"}
+      "experience": {
+        "value": "10 anos",
+        "label": "de experiência"
+      },
+      "projects": {
+        "value": "Mais de 50",
+        "label": "Projetos entregues"
+      },
+      "focus": {
+        "value": "100%",
+        "label": "Foco em inclusão"
+      },
+      "standard": {
+        "value": "WCAG 2.2",
+        "label": "Como padrão de conformidade"
+      }
     }
   },
   "servicesSection": {
@@ -100,22 +116,25 @@
     "cta": "Ver portfólio completo",
     "projects": [
       {
-        "category": "Plataforma SaaS",
-        "name": "Reponto",
-        "description": "Acessibilidade centralizada para gestão de recursos humanos em grande escala.",
-        "imgAlt": "Reponto Project"
+        "imgAlt": "Projeto Portal de Conteúdo",
+        "category": "Portal Web",
+        "name": "Portal de Conteúdo",
+        "url": "https://mbjmc.org.br/alumni/marcobrasileiro/",
+        "description": "Portal de conteúdo institucional com foco em acessibilidade e usabilidade."
       },
       {
+        "imgAlt": "Projeto Sistema de Gestão",
+        "category": "Sistema Web",
+        "name": "Sistema de Gestão",
+        "url": "https://mbjmc.org.br/alumni/marcobrasileiro/",
+        "description": "Sistema web para gestão de dados com tabelas acessíveis e navegação por teclado completa."
+      },
+      {
+        "imgAlt": "Projeto E-commerce Acessível",
         "category": "E-commerce",
-        "name": "Mone de França",
-        "description": "Experiência de compra fluida e inclusiva para uma marca de moda premium.",
-        "imgAlt": "Mone de França Project"
-      },
-      {
-        "category": "Portfólio Profissional",
-        "name": "João Kioshi",
-        "description": "Redesign focado em performance técnica e acessibilidade total de interface.",
-        "imgAlt": "João Kioshi Project"
+        "name": "E-commerce Acessível",
+        "url": "https://mbjmc.org.br/alumni/marcobrasileiro/",
+        "description": "Loja virtual com checkouts acessíveis, foco visível e navegação por teclado."
       }
     ]
   },
@@ -181,7 +200,9 @@
     }
   ],
   "pages": {
-    "home": {"title": "Página inicial"},
+    "home": {
+      "title": "Página inicial"
+    },
     "about": {
       "title": "Sobre",
       "description": "Ajudo organizações a tornarem seus produtos digitais, processos e cultura mais acessíveis e usáveis.",
@@ -200,9 +221,21 @@
       "title": "Portfolio",
       "description": "Projetos de desenvolvimento acessível, consultoria e implementação de interfaces inclusivas.",
       "projects": [
-        {"title": "Projeto 01", "description": "Descrição do projeto.", "link": "Ver projeto →"},
-        {"title": "Projeto 02", "description": "Descrição do projeto.", "link": "Ver projeto →"},
-        {"title": "Projeto 03", "description": "Descrição do projeto.", "link": "Ver projeto →"}
+        {
+          "title": "Projeto 01",
+          "description": "Descrição do projeto.",
+          "link": "Ver projeto →"
+        },
+        {
+          "title": "Projeto 02",
+          "description": "Descrição do projeto.",
+          "link": "Ver projeto →"
+        },
+        {
+          "title": "Projeto 03",
+          "description": "Descrição do projeto.",
+          "link": "Ver projeto →"
+        }
       ]
     },
     "talks": {

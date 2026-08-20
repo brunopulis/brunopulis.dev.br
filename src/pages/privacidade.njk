@@ -5,24 +5,26 @@ title: 'Política de Privacidade'
 description: 'Saiba como coletamos, usamos e protegemos seus dados pessoais em conformidade com a Lei Geral de Proteção de Dados (LGPD).'
 ---
 
-<section class="page-content">
-  <div class="mx-auto px-8 max-w-7xl">
-    <h1>{{ 'pages.privacy.title' | i18n(locale) }}</h1>
-    <p class="lead">{{ 'pages.privacy.description' | i18n(locale) }}</p>
+<section class="region">
+  <div class="wrapper">
+    <div class="flow prose">
+      <h1>{{ 'pages.privacy.title' | i18n(locale) }}</h1>
+      <p class="lede">{{ 'pages.privacy.description' | i18n(locale) }}</p>
 
-    {% for section in 'pages.privacy.sections' | i18n(locale) %}
-    <h2>{{ section.heading }}</h2>
-    {% if section.text %}<p>{{ section.text }}</p>{% endif %}
-    {% if section.intro %}<p>{{ section.intro }}</p>{% endif %}
-    {% if section.items %}
-    <ul>
-      {% for item in section.items %}
-      <li>{{ item }}</li>
+      {% for section in 'pages.privacy.sections' | i18n(locale) %}
+      <h2>{{ section.heading }}</h2>
+      {% if section.text %}<p>{{ section.text }}</p>{% endif %}
+      {% if section.intro %}<p>{{ section.intro }}</p>{% endif %}
+      {% if section.items %}
+      <ul>
+        {% for item in section.items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
       {% endfor %}
-    </ul>
-    {% endif %}
-    {% endfor %}
 
-    <p><em>{{ 'pages.privacy.lastUpdate' | i18n(locale) }}</em></p>
+      <p><em>{{ 'pages.privacy.lastUpdate' | i18n(locale) }}</em></p>
+    </div>
   </div>
 </section>
