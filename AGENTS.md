@@ -56,3 +56,5 @@ src/
 ## Package manager
 
 Use `npm`. Lockfile: `package-lock.json` (`pnpm-lock.yaml` exists but is gitignored). `.npmrc` hoists all packages (`shamefully-hoist=true`).
+
+Note: `npm install` / `npm ci` must run with `--legacy-peer-deps` due to a pre-existing peer conflict (`markdown-it-prism` requires `markdown-it <15`, while the project uses `^15.0.1`).
