@@ -14,10 +14,6 @@
 @use '@fortawesome/fontawesome-free/scss/solid';
 @use '@fortawesome/fontawesome-free/scss/brands';
 
-/* Marca Bruno Pulis — fontes, tokens e componentes */
-@import 'brand/tokens';
-@import 'brand/components';
-
 /*
 * The variables/tokens (or whatever you
 * wish to call them) that power the rest of your styles
@@ -54,6 +50,7 @@
 * skeleton to support any variant of a component
 */
 @import 'compositions/flow';
+@import 'compositions/components';
 @import 'compositions/region';
 @import 'compositions/wrapper';
 @import 'compositions/grid';

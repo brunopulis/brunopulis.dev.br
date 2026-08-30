@@ -11444,749 +11444,6 @@
   --fa: "\f8e8";
 }
 
-/* Marca Bruno Pulis — fontes, tokens e componentes */
-/*
-BRAND TOKENS — Bruno Pulis
-Derived from src/_data/theme.json and src/assets/images/icon.svg.
-Overrides the cu.css theme custom properties in src/assets/scss/cu/abstracts/_theme.scss.
-Keeps the vendored cu files pristine.
-*/
-:root {
-  /* --- Color primitives (derived from the brand) --- */
-  --color-dark: #171e1e; /* errie-black-900 — logo ink */
-  --color-dark-mod-1: #252c2c; /* errie-black-800 */
-  --color-dark-mod-2: #080c0c; /* errie-black-950 */
-  --color-dark-mod-3: #6b8080; /* errie-black-500 */
-  --color-light: #ffffff;
-  --color-light-mod-1: #fafafa; /* light-silver-50 */
-  --color-light-mod-2: #f5f5f5; /* light-silver-100 */
-  --color-light-mod-3: #d9d9d9; /* light-silver-300 */
-  --color-light-mod-4: #a3a3a3; /* light-silver-400 */
-  --color-light-mod-5: #727272; /* light-silver-500 */
-  --color-primary: #610404; /* blood-red-950 — marca */
-  --color-primary-mod: #8a1212; /* blood-red-900 */
-  --color-primary-tint: #f11111; /* blood-red-600 */
-  --color-secondary: #849cdb; /* vista-blue-500 */
-  --color-secondary-tint: #b4cced; /* vista-blue-300 */
-  --color-tertiary: #ffdfdf; /* blood-red-100 */
-  --color-tertiary-tint: #fff1f1; /* blood-red-50 */
-  /* --- Color semantic tokens --- */
-  --color-text: var(--color-dark);
-  --color-text-subtle: var(--color-dark-mod-3);
-  --color-text-invert: var(--color-light);
-  --color-canvas: var(--color-light);
-  --color-surface: var(--color-light-mod-1);
-  --color-surface-raised: var(--color-light-mod-2);
-  --color-border: var(--color-light-mod-3);
-  --color-brand: var(--color-primary);
-  --color-brand-bright: var(--color-primary-tint);
-  --color-accent: var(--color-secondary);
-  --color-accent-text: #44538f; /* vista-blue-800 — legível sobre canvas claro */
-  --color-highlight: var(--color-tertiary);
-  /* --- Typography semantic tokens --- */
-  --font-base: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-  --font-display: 'Noto Serif', Georgia, 'Times New Roman', serif;
-  --font-accent: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
-  --font-weight-regular: 400;
-  --font-weight-bold: 700;
-  /* Extra Utopia steps for display sizes */
-  --step-5: clamp(2.48rem, calc(2.02rem + 2.31vw), 3.81rem);
-  --step-6: clamp(2.98rem, calc(2.36rem + 3.11vw), 4.77rem);
-  /* Bump the semantic scale one notch up from the cu defaults */
-  --font-size-2xl: var(--step-5);
-  --font-size-xl: var(--step-4);
-  --font-size-l: var(--step-3);
-  --font-size-m: var(--step-2);
-  --font-size-s: var(--step-1);
-  --font-size-xs: var(--step-0);
-  --font-size-lede: var(--step-1);
-  --font-size-meta: var(--step--1);
-  --font-size-base: var(--step-0);
-  /* --- UI semantic tokens --- */
-  --gutter: var(--space-s-m);
-  --focus-ring-color: var(--color-primary-tint);
-  --focus-ring-width: 2px;
-  --focus-ring-offset: 2px;
-  --focus-ring-style: dotted;
-  --stroke-style: solid;
-  --stroke-width: 2px;
-  --stroke-color: var(--color-border, currentColor);
-  --radius: 0; /* cantos retos — estética de desenho técnico */
-  --shadow: 0 1px 2px rgba(23, 30, 30, 0.06), 0 8px 24px rgba(23, 30, 30, 0.06);
-  --wrapper-max-width: 80rem;
-}
-
-/* The site is intentionally light-first. Neutralize the few dark-mode
-preference rules shipped by cu.css so they never apply. */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-text: var(--color-dark);
-    --color-text-subtle: var(--color-dark-mod-3);
-    --color-text-invert: var(--color-light);
-    --color-canvas: var(--color-light);
-    --color-surface: var(--color-light-mod-1);
-    --color-surface-raised: var(--color-light-mod-2);
-    --color-border: var(--color-light-mod-3);
-    --color-brand: var(--color-primary);
-    --color-accent: var(--color-secondary);
-  }
-  img,
-  picture {
-    filter: none;
-  }
-  mark,
-  ::selection {
-    color: var(--color-text);
-    background-color: var(--color-highlight);
-  }
-}
-/*
-BRAND COMPONENTS — Bruno Pulis
-Project blocks built on top of cu.css. CUBE CSS conventions:
-blocks (skeletal components) + exceptions (data-variant / data-state).
-*/
-/* ------------------------------------------------------------------ */
-/* Global refinements                                                  */
-/* ------------------------------------------------------------------ */
-/* Calm the aggressive cu link hover so text links stay readable.
-   Primary fills are reserved for .button and the CTA email link. */
-a:hover,
-a:focus {
-  background-color: transparent;
-  text-decoration: underline;
-  text-decoration-thickness: var(--text-decoration-thickness, 2px);
-  text-underline-offset: 0.2em;
-}
-
-/* Brand mark (logo) is not a text link */
-a:has(> img) {
-  text-decoration: none;
-}
-
-/* ------------------------------------------------------------------ */
-/* Eyebrow / lede / display utilities                                  */
-/* ------------------------------------------------------------------ */
-.eyebrow {
-  color: var(--color-accent-text);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.eyebrow--sm {
-  font-size: var(--font-size-meta);
-  letter-spacing: 0.16em;
-}
-
-.eyebrow--invert {
-  color: var(--color-secondary-tint);
-}
-
-.lede {
-  font-size: var(--font-size-lede);
-  line-height: var(--line-height-base);
-}
-
-/* Serif display + italic accent word, the brand voice */
-.display-accent {
-  color: var(--color-brand);
-  font-style: italic;
-}
-
-/* ------------------------------------------------------------------ */
-/* Header + navigation                                                 */
-/* ------------------------------------------------------------------ */
-.site-header {
-  background: var(--color-canvas);
-  border-bottom: var(--stroke-width) solid var(--color-brand);
-  position: sticky;
-  top: 0;
-  z-index: 20;
-}
-
-.site-header .wrapper {
-  --repel-vertical-alignment: center;
-  padding-block: var(--space-2xs);
-}
-
-.brand {
-  align-items: center;
-  color: var(--color-text);
-  display: inline-flex;
-  font-size: var(--font-size-s);
-  font-weight: var(--font-weight-bold);
-  gap: var(--space-2xs);
-  text-decoration: none;
-}
-
-.brand:hover {
-  background-color: transparent;
-  color: var(--color-brand);
-  text-decoration: none;
-}
-
-.brand__mark {
-  height: auto;
-  width: 1.5rem;
-}
-
-.brand__name {
-  letter-spacing: -0.02em;
-}
-
-.site-nav {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2xs);
-}
-
-.site-nav__links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2xs);
-  list-style: none;
-}
-
-.site-nav__link {
-  color: var(--color-text);
-  display: inline-block;
-  font-weight: var(--font-weight-bold);
-  padding: var(--space-3xs) var(--space-2xs);
-  text-decoration: none;
-}
-
-.site-nav__link:hover {
-  color: var(--color-brand);
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.3em;
-}
-
-.site-nav__link[aria-current=page] {
-  color: var(--color-brand);
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.3em;
-}
-
-.site-nav__meta {
-  align-items: center;
-  display: flex;
-  gap: var(--space-2xs);
-}
-
-.lang-switch {
-  display: flex;
-  gap: var(--space-3xs);
-}
-
-.lang-switch a {
-  color: var(--color-text-subtle);
-  font-weight: var(--font-weight-bold);
-  padding: var(--space-3xs) var(--space-2xs);
-  text-decoration: none;
-}
-
-.lang-switch a:hover {
-  color: var(--color-brand);
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.3em;
-}
-
-.lang-switch a[aria-current=page] {
-  color: var(--color-brand);
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.3em;
-}
-
-.site-nav__rss {
-  color: var(--color-text-subtle);
-  font-size: 1.1rem;
-  padding: var(--space-3xs) var(--space-2xs);
-  text-decoration: none;
-}
-
-.site-nav__rss:hover {
-  color: var(--color-brand);
-  text-decoration: none;
-}
-
-/* ------------------------------------------------------------------ */
-/* Hero — "O arquiteto" (blueprint-framed portrait)                    */
-/* ------------------------------------------------------------------ */
-.hero {
-  --region-space: clamp(3rem, 10vw, 6rem);
-  background-position: 0 0;
-  background-size: 1.5rem 1.5rem;
-  padding-inline: 0;
-  text-align: left;
-}
-
-.hero > * {
-  margin-inline: 0;
-}
-
-.hero__grid {
-  --grid-min-item-size: clamp(18rem, 45vw, 28rem);
-  align-items: center;
-}
-
-.hero__intro {
-  --flow-space: var(--space-s-m);
-  text-align: left;
-}
-
-.hero__title {
-  font-size: var(--step-5);
-  margin-block-start: var(--space-3xs);
-}
-
-.hero__subtitle {
-  color: var(--color-text-subtle);
-  font-size: var(--font-size-lede);
-  line-height: var(--line-height-loose);
-  max-width: var(--measure-longform);
-}
-
-.hero__actions {
-  --cluster-horizontal-alignment: flex-start;
-  --gutter: var(--space-s);
-  padding-block-start: var(--space-xs);
-}
-
-/* Blueprint frame */
-.hero__media-figure {
-  margin: 0;
-  position: relative;
-}
-
-.hero__media-figure img {
-  border: var(--stroke-width) solid var(--color-brand);
-  display: block;
-  height: auto;
-  position: relative;
-  width: 100%;
-  z-index: 1;
-}
-
-/* ------------------------------------------------------------------ */
-/* About + stats                                                       */
-/* ------------------------------------------------------------------ */
-.about {
-  background: var(--color-light-mod-1);
-}
-
-.about__grid {
-  --grid-min-item-size: clamp(18rem, 42vw, 30rem);
-}
-
-.about__intro {
-  --flow-space: var(--space-s-m);
-}
-
-.about__text strong {
-  font-weight: var(--font-weight-bold);
-}
-
-.stats {
-  display: grid;
-  gap: var(--space-s-l);
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.stat {
-  border-top: 3px solid var(--color-brand);
-  padding-block-start: var(--space-s);
-}
-
-.stat__value {
-  color: var(--color-brand);
-  font-family: var(--font-display);
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-flat);
-}
-
-.stat__label {
-  color: var(--color-text-subtle);
-  font-size: var(--font-size-meta);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.14em;
-  margin-block-start: var(--space-2xs);
-  text-transform: uppercase;
-}
-
-/* ------------------------------------------------------------------ */
-/* Services — dark brand band                                          */
-/* ------------------------------------------------------------------ */
-.services {
-  background: var(--color-brand);
-  color: var(--color-text-invert);
-}
-
-.services__title {
-  color: var(--color-text-invert);
-}
-
-.services__list {
-  --grid-min-item-size: clamp(14rem, 26vw, 18rem);
-  margin-block-start: var(--space-l);
-}
-
-.service {
-  border-top: 2px solid rgba(255, 255, 255, 0.35);
-  padding-block-start: var(--space-s);
-  transition: background-color 0.2s ease;
-}
-
-.service:hover {
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.service__icon {
-  color: var(--color-text-invert);
-  font-size: 1.75rem;
-  margin-block-end: var(--space-2xs);
-}
-
-.service__title {
-  color: var(--color-text-invert);
-  font-size: var(--font-size-m);
-}
-
-.service__text {
-  color: var(--color-text-invert);
-  margin-block-start: var(--space-2xs);
-  opacity: 0.85;
-}
-
-.services__cta {
-  margin-block-start: var(--space-xl);
-}
-
-.services__cta a {
-  color: var(--color-text-invert);
-}
-
-/* ------------------------------------------------------------------ */
-/* Process — a genuine sequence, so numbered steps are meaningful      */
-/* ------------------------------------------------------------------ */
-.process__head {
-  --flow-space: var(--space-3xs);
-  margin-inline: auto;
-  max-width: var(--measure-compact);
-}
-
-.process__list {
-  --grid-min-item-size: clamp(14rem, 22vw, 16rem);
-  --grid-placement: auto-fit;
-  margin-block-start: var(--space-l-xl);
-}
-
-.process__step {
-  border-top: 3px solid var(--color-accent);
-  padding-block-start: var(--space-s);
-}
-
-.process__num {
-  color: var(--color-accent-text);
-  font-family: var(--font-accent);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.08em;
-}
-
-.process__phase {
-  color: var(--color-text-subtle);
-  font-size: var(--font-size-meta);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.16em;
-  margin-block-start: var(--space-2xs);
-  text-transform: uppercase;
-}
-
-.process__step h3 {
-  margin-block-start: var(--space-3xs);
-}
-
-.process__step p:last-child {
-  color: var(--color-text-subtle);
-  margin-block-start: var(--space-2xs);
-}
-
-/* ------------------------------------------------------------------ */
-/* Portfolio                                                           */
-/* ------------------------------------------------------------------ */
-.portfolio {
-  background: var(--color-light-mod-1);
-}
-
-.portfolio__head {
-  --flow-space: var(--space-3xs);
-}
-
-.portfolio__list {
-  --grid-min-item-size: clamp(15rem, 30vw, 20rem);
-  margin-block-start: var(--space-l-xl);
-}
-
-.portfolio__card img {
-  filter: grayscale(1);
-  transition: filter 0.5s ease;
-}
-
-.portfolio__card:hover img {
-  filter: grayscale(0);
-}
-
-.portfolio__card .eyebrow {
-  margin-block-end: var(--space-3xs);
-}
-
-/* ------------------------------------------------------------------ */
-/* CTA — contact band                                                  */
-/* ------------------------------------------------------------------ */
-.cta {
-  background: var(--color-dark-mod-1);
-  color: var(--color-text-invert);
-}
-
-.cta__title {
-  color: var(--color-text-invert);
-  font-size: var(--font-size-xl);
-  margin-inline: auto;
-  max-width: 24ch;
-}
-
-.cta__title .display-accent {
-  color: var(--color-secondary-tint);
-}
-
-.cta__email {
-  --flow-space: var(--space-l);
-  margin-block-start: var(--space-l);
-}
-
-.cta__email-link {
-  border-bottom: 3px solid var(--color-secondary);
-  color: var(--color-text-invert);
-  font-family: var(--font-display);
-  font-size: var(--font-size-l);
-  line-height: var(--line-height-compact);
-  padding-block-end: var(--space-3xs);
-  text-decoration: none;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.cta__email-link:hover {
-  background-color: var(--color-brand);
-  border-bottom-color: transparent;
-  color: var(--color-text-invert);
-  text-decoration: none;
-}
-
-/* ------------------------------------------------------------------ */
-/* Footer                                                              */
-/* ------------------------------------------------------------------ */
-.site-footer {
-  background: var(--color-dark-mod-2);
-  color: var(--color-text-invert);
-}
-
-.site-footer a {
-  color: var(--color-text-invert);
-}
-
-.site-footer__name {
-  font-family: var(--font-display);
-  font-size: var(--font-size-l);
-  font-style: italic;
-}
-
-.site-footer__role {
-  color: var(--color-text-invert);
-  font-size: var(--font-size-meta);
-  font-weight: var(--font-weight-regular);
-  letter-spacing: 0.16em;
-  margin-block-start: var(--space-2xs);
-  opacity: 0.8;
-  text-transform: uppercase;
-}
-
-.site-footer__social {
-  --gutter: var(--space-2xs);
-}
-
-.site-footer__social a {
-  font-size: 1.35rem;
-  padding: var(--space-2xs);
-  text-decoration: none;
-}
-
-.site-footer__social a:hover {
-  color: var(--color-secondary-tint);
-  text-decoration: none;
-}
-
-.site-footer__legal {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  --cluster-vertical-alignment: center;
-  --gutter: var(--space-s);
-  font-size: var(--font-size-meta);
-  margin-block-start: var(--space-l-xl);
-  padding-block-start: var(--space-s);
-}
-
-.site-footer__legal a {
-  opacity: 0.85;
-  padding: var(--space-3xs) var(--space-2xs);
-  text-decoration: none;
-}
-
-.site-footer__legal a:hover {
-  color: var(--color-text-invert);
-  opacity: 1;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.3em;
-}
-
-/* ------------------------------------------------------------------ */
-/* Service cards (macro)                                               */
-/* ------------------------------------------------------------------ */
-.service-card__icon {
-  color: var(--color-brand);
-  font-size: 1.75rem;
-}
-
-.service-card__icon .fa-solid {
-  display: inline-block;
-}
-
-/* ------------------------------------------------------------------ */
-/* Button exception: keep the outline variant crisp                    */
-/* ------------------------------------------------------------------ */
-.button {
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.04em;
-  padding: var(--space-xs) var(--space-m);
-  text-transform: none;
-}
-
-.button:hover,
-.button:focus {
-  text-decoration: none;
-}
-
-.button[data-variant=outline]:hover,
-.button[data-variant=outline]:focus {
-  background: var(--color-canvas);
-  color: var(--color-brand);
-  filter: none;
-}
-
-/* ------------------------------------------------------------------ */
-/* Prose refinement for internal pages                                 */
-/* ------------------------------------------------------------------ */
-.prose a {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
-}
-
-.prose a:hover {
-  color: var(--color-brand-bright);
-}
-
-.callout {
-  background: var(--color-surface);
-}
-
-.callout[data-variant=brand] {
-  background: var(--color-tertiary-tint);
-}
-
-/* ------------------------------------------------------------------ */
-/* Contact page                                                        */
-/* ------------------------------------------------------------------ */
-.contact__head {
-  --flow-space: var(--space-3xs);
-}
-
-.contact__title {
-  font-size: var(--step-5);
-  margin-block-start: var(--space-3xs);
-}
-
-.contact__channels {
-  --flow-space: var(--space-s);
-}
-
-.contact__group-label {
-  color: var(--color-accent-text);
-  font-size: var(--font-size-meta);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.16em;
-  margin-block-end: var(--space-2xs);
-  text-transform: uppercase;
-}
-
-.contact__channel {
-  border-top: 3px solid var(--color-brand);
-  padding-block-start: var(--space-s);
-}
-
-.contact__channel-label {
-  color: var(--color-text-subtle);
-  font-size: var(--font-size-meta);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.14em;
-  margin-block-end: var(--space-3xs);
-  text-transform: uppercase;
-}
-
-.contact__channel a {
-  font-family: var(--font-display);
-  font-size: var(--font-size-m);
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
-}
-
-.contact__channel a:hover {
-  color: var(--color-brand-bright);
-}
-
-.contact__scheduling {
-  border-top: 1px solid var(--color-border);
-  margin-block-start: var(--space-xl);
-  padding-block-start: var(--space-l);
-}
-
-.contact__scheduling h2 {
-  font-size: var(--font-size-l);
-  margin-block-end: var(--space-2xs);
-}
-
-.contact__scheduling p {
-  color: var(--color-text-subtle);
-  margin-block-end: var(--space-s);
-}
-
-.contact__scheduling .contact__channel {
-  border-top-color: var(--color-accent);
-}
-
-/* Font Awesome icon base */
-.fa-solid,
-.fa-brands {
-  font-size: inherit;
-}
-
 /*
 * The variables/tokens (or whatever you
 * wish to call them) that power the rest of your styles
@@ -12336,8 +11593,10 @@ Generated with Utopia Fluid Type
 }
 
 /*
-THEME tokens
-Includes primitive tokens for color and semantic tokens.
+BRAND TOKENS — Bruno Pulis
+Derived from src/_data/theme.json and src/assets/images/icon.svg.
+Overrides the cu.css theme custom properties in src/assets/scss/cu/abstracts/_theme.scss.
+Keeps the vendored cu files pristine.
 */
 :root {
   /* --- Color primitives (derived from the brand) --- */
@@ -12362,7 +11621,6 @@ Includes primitive tokens for color and semantic tokens.
   --color-text: var(--color-dark);
   --color-text-subtle: var(--color-dark-mod-3);
   --color-text-invert: var(--color-light);
-  --color-paper: #d9d9d9;
   --color-canvas: var(--color-light);
   --color-surface: var(--color-light-mod-1);
   --color-surface-raised: var(--color-light-mod-2);
@@ -12372,9 +11630,10 @@ Includes primitive tokens for color and semantic tokens.
   --color-accent: var(--color-secondary);
   --color-accent-text: #44538f; /* vista-blue-800 — legível sobre canvas claro */
   --color-highlight: var(--color-tertiary);
-  /* Typography semantic tokens */
+  /* --- Typography semantic tokens --- */
   --font-base: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
   --font-display: 'Noto Serif', Georgia, 'Times New Roman', serif;
+  --font-accent: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
   --line-height-flat: 1;
@@ -12385,42 +11644,60 @@ Includes primitive tokens for color and semantic tokens.
   --measure-longform: 65ch;
   --tracking: -0.04ch;
   --tracking-compact: -0.05ch;
+  /* Extra Utopia steps for display sizes */
+  --step-5: clamp(2.48rem, calc(2.02rem + 2.31vw), 3.81rem);
+  --step-6: clamp(2.98rem, calc(2.36rem + 3.11vw), 4.77rem);
+  /* Bump the semantic scale one notch up from the cu defaults */
+  --font-size-2xl: var(--step-5);
+  --font-size-xl: var(--step-4);
+  --font-size-l: var(--step-3);
+  --font-size-m: var(--step-2);
+  --font-size-s: var(--step-1);
+  --font-size-xs: var(--step-0);
+  --font-size-lede: var(--step-1);
+  --font-size-meta: var(--step--1);
+  --font-size-base: var(--step-0);
+  /* --- UI semantic tokens --- */
+  --gutter: var(--space-s-m);
+  --focus-ring-color: var(--color-primary-tint);
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+  --focus-ring-style: dotted;
+  --stroke-style: solid;
+  --stroke-width: 2px;
+  --stroke-color: var(--color-border, currentColor);
+  --stroke: var(--stroke-width) var(--stroke-style) var(--stroke-color);
+  --radius: 0; /* cantos retos — estética de desenho técnico */
+  --shadow: 0 1px 2px rgba(23, 30, 30, 0.06), 0 8px 24px rgba(23, 30, 30, 0.06);
+  --wrapper-max-width: 80rem;
   --text-decoration-color: currentColor;
   --text-decoration-line: underline;
   --text-decoration-style: solid;
   --text-decoration-thickness: 2px;
-  /* UI semantic tokens */
-  --gutter: var(--space-s-m);
-  --focus-ring-width: 2px;
-  --focus-ring-color: currentColor;
-  --focus-ring-offset: 2px;
-  --focus-ring-style: dotted;
-  --stroke-style: solid;
-  --stroke-width: 0.1rem;
-  --stroke-color: var(--color-border, currentColor);
-  --radius: 0;
-  --shadow: 0px 3px 7px rgba(0, 0, 0, 0.08), 0px 0px 1px rgba(0, 0, 0, 0.025);
 }
 
-/*
-DARK MODE
-If theme doesn’t require system preferences dark mode then remove everything below.
-*/
+/* The site is intentionally light-first. Neutralize the few dark-mode
+preference rules shipped by cu.css so they never apply. */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-text: var(--color-light-mod-3);
-    --color-text-subtle: var(--color-light-mod-5);
-    --color-text-invert: var(--color-dark);
-    --color-canvas: var(--color-dark);
-    --color-surface: var(--color-dark-mod-1);
-    --color-surface-raised: var(--color-dark-mod-2);
+    --color-text: var(--color-dark);
+    --color-text-subtle: var(--color-dark-mod-3);
+    --color-text-invert: var(--color-light);
+    --color-canvas: var(--color-light);
+    --color-surface: var(--color-light-mod-1);
+    --color-surface-raised: var(--color-light-mod-2);
     --color-border: var(--color-light-mod-3);
-    --color-brand: var(--color-primary-tint);
-    --color-accent: var(--color-secondary-tint);
-    --color-highlight: var(--color-tertiary-tint);
-    --text-decoration-color: currentColor;
-    --focus-ring-color: currentColor;
-    --stroke-color: currentColor;
+    --color-brand: var(--color-primary);
+    --color-accent: var(--color-secondary);
+  }
+  img,
+  picture {
+    filter: none;
+  }
+  mark,
+  ::selection {
+    color: var(--color-text);
+    background-color: var(--color-highlight);
   }
 }
 /*
@@ -13156,25 +12433,57 @@ nav[data-variant=sidebar] ul > li ul {
   --flow-space: var(--space-l-xl);
 }
 
-/*
-HERO
-*/
 .hero {
-  --region-space: 8rem;
-  background-color: var(--color-canvas);
-  background-position: 0 0, 50px 50px;
-  background-size: 3px 3px;
-  padding-inline: var(--space-s-m);
-  text-align: center;
+  --region-space: clamp(3rem, 10vw, 6rem);
+  background-position: 0 0;
+  background-size: 1.5rem 1.5rem;
+  padding-inline: 0;
+  text-align: left;
 }
 
-/*
-Ensure direct decending elements maintain a consistent flow space when hero is used with .flow.
-Center align elements.
-*/
 .hero > * {
-  --flow-space: 1rem;
-  margin-inline: auto;
+  margin-inline: 0;
+}
+
+.hero__grid {
+  --grid-min-item-size: clamp(18rem, 45vw, 28rem);
+  align-items: center;
+}
+
+.hero__intro {
+  --flow-space: var(--space-s-m);
+  text-align: left;
+}
+
+.hero__title {
+  font-size: var(--step-5);
+  margin-block-start: var(--space-3xs);
+}
+
+.hero__subtitle {
+  color: var(--color-dark);
+  font-size: var(--font-size-lede);
+  line-height: var(--line-height-loose);
+  max-width: var(--measure-longform);
+}
+
+.hero__actions {
+  --cluster-horizontal-alignment: flex-start;
+  --gutter: var(--space-s);
+  padding-block-start: var(--space-xs);
+}
+
+.hero__media-figure {
+  margin: 0;
+  position: relative;
+}
+
+.hero__media-figure img {
+  display: block;
+  height: auto;
+  position: relative;
+  width: 100%;
+  z-index: 1;
 }
 
 /* 
@@ -13361,6 +12670,595 @@ Applies a margin to sibling elements based on a --flow-space custom property.
 */
 .flow > * + * {
   margin-top: var(--flow-space, 1em);
+}
+
+/*
+BRAND COMPONENTS — Bruno Pulis
+Project blocks built on top of cu.css. CUBE CSS conventions:
+blocks (skeletal components) + exceptions (data-variant / data-state).
+*/
+/* ------------------------------------------------------------------ */
+/* Global refinements                                                  */
+/* ------------------------------------------------------------------ */
+/* Calm the aggressive cu link hover so text links stay readable.
+   Primary fills are reserved for .button and the CTA email link. */
+a:hover,
+a:focus {
+  background-color: transparent;
+  text-decoration: underline;
+  text-decoration-thickness: var(--text-decoration-thickness, 2px);
+  text-underline-offset: 0.2em;
+}
+
+/* Brand mark (logo) is not a text link */
+a:has(> img) {
+  text-decoration: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* Eyebrow / lede / display utilities                                  */
+/* ------------------------------------------------------------------ */
+.eyebrow {
+  color: var(--color-accent-text);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.eyebrow--sm {
+  font-size: var(--font-size-meta);
+  letter-spacing: 0.16em;
+}
+
+.eyebrow--invert {
+  color: var(--color-secondary-tint);
+}
+
+.lede {
+  font-size: var(--font-size-lede);
+  line-height: var(--line-height-base);
+}
+
+/* Serif display + italic accent word, the brand voice */
+.display-accent {
+  color: var(--color-brand);
+  font-style: italic;
+}
+
+/* ------------------------------------------------------------------ */
+/* Header + navigation                                                 */
+/* ------------------------------------------------------------------ */
+.site-header {
+  background: var(--color-canvas);
+  border-bottom: var(--stroke-width) solid var(--color-brand);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.site-header .wrapper {
+  --repel-vertical-alignment: center;
+  padding-block: var(--space-2xs);
+}
+
+.brand {
+  align-items: center;
+  color: var(--color-text);
+  display: inline-flex;
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-bold);
+  gap: var(--space-2xs);
+  text-decoration: none;
+}
+
+.brand:hover {
+  background-color: transparent;
+  color: var(--color-brand);
+  text-decoration: none;
+}
+
+.brand__mark {
+  height: auto;
+  width: 1.5rem;
+}
+
+.brand__name {
+  letter-spacing: -0.02em;
+}
+
+.site-nav {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+}
+
+.site-nav__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+  list-style: none;
+}
+
+.site-nav__link {
+  color: var(--color-text);
+  display: inline-block;
+  font-weight: var(--font-weight-bold);
+  padding: var(--space-3xs) var(--space-2xs);
+  text-decoration: none;
+}
+
+.site-nav__link:hover {
+  color: var(--color-brand);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
+}
+
+.site-nav__link[aria-current=page] {
+  color: var(--color-brand);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
+}
+
+.site-nav__meta {
+  align-items: center;
+  display: flex;
+  gap: var(--space-2xs);
+}
+
+.lang-switch {
+  display: flex;
+  gap: var(--space-3xs);
+}
+
+.lang-switch a {
+  color: var(--color-text-subtle);
+  font-weight: var(--font-weight-bold);
+  padding: var(--space-3xs) var(--space-2xs);
+  text-decoration: none;
+}
+
+.lang-switch a:hover {
+  color: var(--color-brand);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
+}
+
+.lang-switch a[aria-current=page] {
+  color: var(--color-brand);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
+}
+
+.site-nav__rss {
+  color: var(--color-text-subtle);
+  font-size: 1.1rem;
+  padding: var(--space-3xs) var(--space-2xs);
+  text-decoration: none;
+}
+
+.site-nav__rss:hover {
+  color: var(--color-brand);
+  text-decoration: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* About + stats                                                       */
+/* ------------------------------------------------------------------ */
+.about {
+  background: var(--color-light-mod-1);
+}
+
+.about__grid {
+  --grid-min-item-size: clamp(18rem, 42vw, 30rem);
+}
+
+.about__intro {
+  --flow-space: var(--space-s-m);
+}
+
+.about__text strong {
+  font-weight: var(--font-weight-bold);
+}
+
+.stats {
+  display: grid;
+  gap: var(--space-s-l);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.stat {
+  border-top: 3px solid var(--color-brand);
+  padding-block-start: var(--space-s);
+}
+
+.stat__value {
+  color: var(--color-brand);
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-flat);
+}
+
+.stat__label {
+  color: var(--color-text-subtle);
+  font-size: var(--font-size-meta);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.14em;
+  margin-block-start: var(--space-2xs);
+  text-transform: uppercase;
+}
+
+/* ------------------------------------------------------------------ */
+/* Services — dark brand band                                          */
+/* ------------------------------------------------------------------ */
+.services {
+  background: var(--color-brand);
+  color: var(--color-text-invert);
+}
+
+.services__title {
+  color: var(--color-text-invert);
+}
+
+.services__list {
+  --grid-min-item-size: clamp(14rem, 26vw, 18rem);
+  margin-block-start: var(--space-l);
+}
+
+.service {
+  border-top: 2px solid rgba(255, 255, 255, 0.35);
+  padding-block-start: var(--space-s);
+  transition: background-color 0.2s ease;
+}
+
+.service:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.service__icon {
+  color: var(--color-text-invert);
+  font-size: 1.75rem;
+  margin-block-end: var(--space-2xs);
+}
+
+.service__title {
+  color: var(--color-text-invert);
+  font-size: var(--font-size-m);
+}
+
+.service__text {
+  color: var(--color-text-invert);
+  margin-block-start: var(--space-2xs);
+  opacity: 0.85;
+}
+
+.services__cta {
+  margin-block-start: var(--space-xl);
+}
+
+.services__cta a {
+  color: var(--color-text-invert);
+}
+
+/* ------------------------------------------------------------------ */
+/* Process — a genuine sequence, so numbered steps are meaningful      */
+/* ------------------------------------------------------------------ */
+.process__head {
+  --flow-space: var(--space-3xs);
+  margin-inline: auto;
+  max-width: var(--measure-compact);
+}
+
+.process__list {
+  --grid-min-item-size: clamp(14rem, 22vw, 16rem);
+  --grid-placement: auto-fit;
+  margin-block-start: var(--space-l-xl);
+}
+
+.process__step {
+  border-top: 3px solid var(--color-accent);
+  padding-block-start: var(--space-s);
+}
+
+.process__num {
+  color: var(--color-accent-text);
+  font-family: var(--font-accent);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.08em;
+}
+
+.process__phase {
+  color: var(--color-text-subtle);
+  font-size: var(--font-size-meta);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.16em;
+  margin-block-start: var(--space-2xs);
+  text-transform: uppercase;
+}
+
+.process__step h3 {
+  margin-block-start: var(--space-3xs);
+}
+
+.process__step p:last-child {
+  color: var(--color-text-subtle);
+  margin-block-start: var(--space-2xs);
+}
+
+/* ------------------------------------------------------------------ */
+/* Portfolio                                                           */
+/* ------------------------------------------------------------------ */
+.portfolio {
+  background: var(--color-light-mod-1);
+}
+
+.portfolio__head {
+  --flow-space: var(--space-3xs);
+}
+
+.portfolio__list {
+  --grid-min-item-size: clamp(15rem, 30vw, 20rem);
+  margin-block-start: var(--space-l-xl);
+}
+
+.portfolio__card img {
+  filter: grayscale(1);
+  transition: filter 0.5s ease;
+}
+
+.portfolio__card:hover img {
+  filter: grayscale(0);
+}
+
+.portfolio__card .eyebrow {
+  margin-block-end: var(--space-3xs);
+}
+
+/* ------------------------------------------------------------------ */
+/* CTA — contact band                                                  */
+/* ------------------------------------------------------------------ */
+.cta {
+  background: var(--color-dark-mod-1);
+  color: var(--color-text-invert);
+}
+
+.cta__title {
+  color: var(--color-text-invert);
+  font-size: var(--font-size-xl);
+  margin-inline: auto;
+  max-width: 24ch;
+}
+
+.cta__title .display-accent {
+  color: var(--color-secondary-tint);
+}
+
+.cta__email {
+  --flow-space: var(--space-l);
+  margin-block-start: var(--space-l);
+}
+
+.cta__email-link {
+  border-bottom: 3px solid var(--color-secondary);
+  color: var(--color-text-invert);
+  font-family: var(--font-display);
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-compact);
+  padding-block-end: var(--space-3xs);
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cta__email-link:hover {
+  background-color: var(--color-brand);
+  border-bottom-color: transparent;
+  color: var(--color-text-invert);
+  text-decoration: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* Footer                                                              */
+/* ------------------------------------------------------------------ */
+.site-footer {
+  background: var(--color-dark-mod-2);
+  color: var(--color-text-invert);
+}
+
+.site-footer a {
+  color: var(--color-text-invert);
+}
+
+.site-footer__name {
+  font-family: var(--font-display);
+  font-size: var(--font-size-l);
+  font-style: italic;
+}
+
+.site-footer__role {
+  color: var(--color-text-invert);
+  font-size: var(--font-size-meta);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0.16em;
+  margin-block-start: var(--space-2xs);
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+.site-footer__social {
+  --gutter: var(--space-2xs);
+}
+
+.site-footer__social a {
+  font-size: 1.35rem;
+  padding: var(--space-2xs);
+  text-decoration: none;
+}
+
+.site-footer__social a:hover {
+  color: var(--color-secondary-tint);
+  text-decoration: none;
+}
+
+.site-footer__legal {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  --cluster-vertical-alignment: center;
+  --gutter: var(--space-s);
+  font-size: var(--font-size-meta);
+  margin-block-start: var(--space-l-xl);
+  padding-block-start: var(--space-s);
+}
+
+.site-footer__legal a {
+  opacity: 0.85;
+  padding: var(--space-3xs) var(--space-2xs);
+  text-decoration: none;
+}
+
+.site-footer__legal a:hover {
+  color: var(--color-text-invert);
+  opacity: 1;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
+}
+
+/* ------------------------------------------------------------------ */
+/* Service cards (macro)                                               */
+/* ------------------------------------------------------------------ */
+.service-card__icon {
+  color: var(--color-brand);
+  font-size: 1.75rem;
+}
+
+.service-card__icon .fa-solid {
+  display: inline-block;
+}
+
+/* ------------------------------------------------------------------ */
+/* Button exception: keep the outline variant crisp                    */
+/* ------------------------------------------------------------------ */
+.button {
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.04em;
+  padding: var(--space-xs) var(--space-m);
+  text-transform: none;
+}
+
+.button:hover,
+.button:focus {
+  text-decoration: none;
+}
+
+.button[data-variant=outline]:hover,
+.button[data-variant=outline]:focus {
+  background: var(--color-canvas);
+  color: var(--color-brand);
+  filter: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* Prose refinement for internal pages                                 */
+/* ------------------------------------------------------------------ */
+.prose a {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.prose a:hover {
+  color: var(--color-brand-bright);
+}
+
+.callout {
+  background: var(--color-surface);
+}
+
+.callout[data-variant=brand] {
+  background: var(--color-tertiary-tint);
+}
+
+/* ------------------------------------------------------------------ */
+/* Contact page                                                        */
+/* ------------------------------------------------------------------ */
+.contact__head {
+  --flow-space: var(--space-3xs);
+}
+
+.contact__title {
+  font-size: var(--step-5);
+  margin-block-start: var(--space-3xs);
+}
+
+.contact__channels {
+  --flow-space: var(--space-s);
+}
+
+.contact__group-label {
+  color: var(--color-accent-text);
+  font-size: var(--font-size-meta);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.16em;
+  margin-block-end: var(--space-2xs);
+  text-transform: uppercase;
+}
+
+.contact__channel {
+  border-top: 3px solid var(--color-brand);
+  padding-block-start: var(--space-s);
+}
+
+.contact__channel-label {
+  color: var(--color-text-subtle);
+  font-size: var(--font-size-meta);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.14em;
+  margin-block-end: var(--space-3xs);
+  text-transform: uppercase;
+}
+
+.contact__channel a {
+  font-family: var(--font-display);
+  font-size: var(--font-size-m);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.contact__channel a:hover {
+  color: var(--color-brand-bright);
+}
+
+.contact__scheduling {
+  border-top: 1px solid var(--color-border);
+  margin-block-start: var(--space-xl);
+  padding-block-start: var(--space-l);
+}
+
+.contact__scheduling h2 {
+  font-size: var(--font-size-l);
+  margin-block-end: var(--space-2xs);
+}
+
+.contact__scheduling p {
+  color: var(--color-text-subtle);
+  margin-block-end: var(--space-s);
+}
+
+.contact__scheduling .contact__channel {
+  border-top-color: var(--color-accent);
+}
+
+/* Font Awesome icon base */
+.fa-solid,
+.fa-brands {
+  font-size: inherit;
 }
 
 /*

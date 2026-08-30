@@ -178,66 +178,6 @@ a:has(> img) {
 }
 
 /* ------------------------------------------------------------------ */
-/* Hero — "O arquiteto" (blueprint-framed portrait)                    */
-/* ------------------------------------------------------------------ */
-
-.hero {
-  --region-space: clamp(3rem, 10vw, 6rem);
-  background-position: 0 0;
-  background-size: 1.5rem 1.5rem;
-  padding-inline: 0;
-  text-align: left;
-}
-
-.hero > * {
-  margin-inline: 0;
-}
-
-.hero__grid {
-  --grid-min-item-size: clamp(18rem, 45vw, 28rem);
-  align-items: center;
-}
-
-.hero__intro {
-  --flow-space: var(--space-s-m);
-  text-align: left;
-}
-
-.hero__title {
-  font-size: var(--step-5);
-  margin-block-start: var(--space-3xs);
-}
-
-.hero__subtitle {
-  color: var(--color-text-subtle);
-  font-size: var(--font-size-lede);
-  line-height: var(--line-height-loose);
-  max-width: var(--measure-longform);
-}
-
-.hero__actions {
-  --cluster-horizontal-alignment: flex-start;
-  --gutter: var(--space-s);
-  padding-block-start: var(--space-xs);
-}
-
-/* Blueprint frame */
-
-.hero__media-figure {
-  margin: 0;
-  position: relative;
-}
-
-.hero__media-figure img {
-  border: var(--stroke-width) solid var(--color-brand);
-  display: block;
-  height: auto;
-  position: relative;
-  width: 100%;
-  z-index: 1;
-}
-
-/* ------------------------------------------------------------------ */
 /* About + stats                                                       */
 /* ------------------------------------------------------------------ */
 

@@ -1,7 +1,10 @@
 /*
-THEME tokens
-Includes primitive tokens for color and semantic tokens.
+BRAND TOKENS — Bruno Pulis
+Derived from src/_data/theme.json and src/assets/images/icon.svg.
+Overrides the cu.css theme custom properties in src/assets/scss/cu/abstracts/_theme.scss.
+Keeps the vendored cu files pristine.
 */
+
 :root {
   /* --- Color primitives (derived from the brand) --- */
   --color-dark: #171e1e; /* errie-black-900 — logo ink */
@@ -28,7 +31,6 @@ Includes primitive tokens for color and semantic tokens.
   --color-text: var(--color-dark);
   --color-text-subtle: var(--color-dark-mod-3);
   --color-text-invert: var(--color-light);
-  --color-paper: #d9d9d9;
   --color-canvas: var(--color-light);
   --color-surface: var(--color-light-mod-1);
   --color-surface-raised: var(--color-light-mod-2);
@@ -39,9 +41,10 @@ Includes primitive tokens for color and semantic tokens.
   --color-accent-text: #44538f; /* vista-blue-800 — legível sobre canvas claro */
   --color-highlight: var(--color-tertiary);
 
-  /* Typography semantic tokens */
+  /* --- Typography semantic tokens --- */
   --font-base: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
   --font-display: 'Noto Serif', Georgia, 'Times New Roman', serif;
+  --font-accent: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
 
@@ -54,44 +57,64 @@ Includes primitive tokens for color and semantic tokens.
   --measure-longform: 65ch;
   --tracking: -0.04ch;
   --tracking-compact: -0.05ch;
+
+  /* Extra Utopia steps for display sizes */
+  --step-5: clamp(2.48rem, calc(2.02rem + 2.31vw), 3.81rem);
+  --step-6: clamp(2.98rem, calc(2.36rem + 3.11vw), 4.77rem);
+
+  /* Bump the semantic scale one notch up from the cu defaults */
+  --font-size-2xl: var(--step-5);
+  --font-size-xl: var(--step-4);
+  --font-size-l: var(--step-3);
+  --font-size-m: var(--step-2);
+  --font-size-s: var(--step-1);
+  --font-size-xs: var(--step-0);
+  --font-size-lede: var(--step-1);
+  --font-size-meta: var(--step--1);
+  --font-size-base: var(--step-0);
+
+  /* --- UI semantic tokens --- */
+  --gutter: var(--space-s-m);
+  --focus-ring-color: var(--color-primary-tint);
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+  --focus-ring-style: dotted;
+  --stroke-style: solid;
+  --stroke-width: 2px;
+  --stroke-color: var(--color-border, currentColor);
+  --stroke: var(--stroke-width) var(--stroke-style) var(--stroke-color);
+  --radius: 0; /* cantos retos — estética de desenho técnico */
+  --shadow: 0 1px 2px rgba(23, 30, 30, 0.06), 0 8px 24px rgba(23, 30, 30, 0.06);
+  --wrapper-max-width: 80rem;
   --text-decoration-color: currentColor;
   --text-decoration-line: underline;
   --text-decoration-style: solid;
   --text-decoration-thickness: 2px;
-
-  /* UI semantic tokens */
-  --gutter: var(--space-s-m);
-  --focus-ring-width: 2px;
-  --focus-ring-color: currentColor;
-  --focus-ring-offset: 2px;
-  --focus-ring-style: dotted;
-  --stroke-style: solid; // Use stroke tokens for borders, outlines, SVG paths etc
-  --stroke-width: 0.1rem;
-  --stroke-color: var(--color-border, currentColor);
-  --radius: 0; // Set a rem value to add border radius to buttons, form elements, callouts and accordians.
-  --shadow: 0px 3px 7px rgba(0, 0, 0, 0.08), 0px 0px 1px rgba(0, 0, 0, 0.025);
 }
 
-/*
-DARK MODE
-If theme doesn’t require system preferences dark mode then remove everything below.
-*/
-
+/* The site is intentionally light-first. Neutralize the few dark-mode
+preference rules shipped by cu.css so they never apply. */
 @media (prefers-color-scheme: dark) {
   :root {
-    // --color-theme: dark;
-    --color-text: var(--color-light-mod-3);
-    --color-text-subtle: var(--color-light-mod-5);
-    --color-text-invert: var(--color-dark);
-    --color-canvas: var(--color-dark);
-    --color-surface: var(--color-dark-mod-1);
-    --color-surface-raised: var(--color-dark-mod-2);
+    --color-text: var(--color-dark);
+    --color-text-subtle: var(--color-dark-mod-3);
+    --color-text-invert: var(--color-light);
+    --color-canvas: var(--color-light);
+    --color-surface: var(--color-light-mod-1);
+    --color-surface-raised: var(--color-light-mod-2);
     --color-border: var(--color-light-mod-3);
-    --color-brand: var(--color-primary-tint);
-    --color-accent: var(--color-secondary-tint);
-    --color-highlight: var(--color-tertiary-tint);
-    --text-decoration-color: currentColor;
-    --focus-ring-color: currentColor;
-    --stroke-color: currentColor;
+    --color-brand: var(--color-primary);
+    --color-accent: var(--color-secondary);
+  }
+
+  img,
+  picture {
+    filter: none;
+  }
+
+  mark,
+  ::selection {
+    color: var(--color-text);
+    background-color: var(--color-highlight);
   }
 }

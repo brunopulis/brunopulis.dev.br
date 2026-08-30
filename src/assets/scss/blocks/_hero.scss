@@ -1,22 +1,60 @@
-/*
-HERO
-*/
+// ------------------------------------------------------------------
+// Hero — "O arquiteto" (blueprint-framed portrait)
+// ------------------------------------------------------------------
+
 .hero {
-  --region-space: 8rem;
-  background-color: var(--color-canvas);
-  background-position:
-    0 0,
-    50px 50px;
-  background-size: 3px 3px;
-  padding-inline: var(--space-s-m);
-  text-align: center;
+  --region-space: clamp(3rem, 10vw, 6rem);
+
+  background-position: 0 0;
+  background-size: 1.5rem 1.5rem;
+  padding-inline: 0;
+  text-align: left;
 }
 
-/*
-Ensure direct decending elements maintain a consistent flow space when hero is used with .flow.
-Center align elements.
-*/
 .hero > * {
-  --flow-space: 1rem;
-  margin-inline: auto;
+  margin-inline: 0;
+}
+
+.hero__grid {
+  --grid-min-item-size: clamp(18rem, 45vw, 28rem);
+
+  align-items: center;
+}
+
+.hero__intro {
+  --flow-space: var(--space-s-m);
+
+  text-align: left;
+}
+
+.hero__title {
+  font-size: var(--step-5);
+  margin-block-start: var(--space-3xs);
+}
+
+.hero__subtitle {
+  color: var(--color-dark);
+  font-size: var(--font-size-lede);
+  line-height: var(--line-height-loose);
+  max-width: var(--measure-longform);
+}
+
+.hero__actions {
+  --cluster-horizontal-alignment: flex-start;
+  --gutter: var(--space-s);
+
+  padding-block-start: var(--space-xs);
+}
+
+.hero__media-figure {
+  margin: 0;
+  position: relative;
+}
+
+.hero__media-figure img {
+  display: block;
+  height: auto;
+  position: relative;
+  width: 100%;
+  z-index: 1;
 }
