@@ -8,7 +8,7 @@ Personal site for Bruno Pulis (@brunopulis). Accessible digital consultancy port
 - **CSS**: [Tailwind CSS v4](https://tailwindcss.com/) via CLI (not PostCSS/Vite plugin)
 - **Formatter**: Prettier (`.prettierrc` + `.prettierignore`), no npm script — run via `npx prettier --check .`
 - **Deploy**: Vercel (`vercel.json` controls build command, output dir, and security headers)
-- **No** client-side framework, TypeScript, linter, tests, or CI workflows
+- **No** client-side framework or TypeScript; no linter or CI workflows. Tests: Vitest (unit) + Cypress (E2E), via Husky pre-commit.
 
 ## Project structure
 
@@ -35,6 +35,17 @@ src/
 | `npm run build` | Production build — Tailwind (minified) + Eleventy |
 | `npm run build:css` | Single Tailwind build |
 | `npm run clean` | Remove `_site/` and generated `index.css` |
+| `npm test` / `npm run test:unit` | Unit tests (Vitest) — tests in `tests/` |
+| `npm run test:e2e` | Cypress E2E completo (build + serve + headless) |
+| `npm run test:e2e:smoke` | Cypress E2E smoke (rotas principais) — usado no pre-commit |
+
+## Testing
+
+- **Unit (Vitest)**: `tests/*.test.mjs`. Cobre os filtros de `.eleventy.js` (`faIcon`, `i18n`, paridade pt/en) em `src/_data/filters.js`, e a integridade das custom properties do SCSS (todo `var(--x)` referenciado sem fallback precisa ser declarado — protege contra a regressão de tokens da marca).
+- **E2E (Cypress)**: specs em `cypress/e2e/`. `smoke.cy.js` valida as rotas principais; `full.cy.js` valida hierarquia de títulos, idioma e links internos. Execução orquestrada por `scripts/e2e.js` (faz build estático + sobe servidor local + Cypress headless).
+- **Pre-commit (Husky)**: hook em `.husky/pre-commit` roda **unit sempre + E2E smoke**. Para o E2E completo em CI/uso manual: `npm run test:e2e`.
+- Cypress artifacts (`cypress/videos|screenshots|downloads`) são gitignorados.
+
 
 ## Build notes
 

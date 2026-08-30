@@ -2,8 +2,7 @@ const { createRequire } = require('module');
 const rssModule = createRequire(__filename)('@11ty/eleventy-plugin-rss');
 const pluginRss = rssModule.default || rssModule;
 
-const pt = require('./src/_data/i18n/pt.json');
-const en = require('./src/_data/i18n/en.json');
+const { faIcon, i18n } = require('./src/_data/filters');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/assets');
@@ -33,24 +32,9 @@ module.exports = function (eleventyConfig) {
   });
 
   // Mapeia nomes de ícones usados no i18n (herdados do lucide) para classes do Font Awesome 7.
-  const faIcons = {
-    'fast-forward': 'fa-forward',
-    'file-text': 'fa-file-lines',
-    'book-open': 'fa-book-open',
-    users: 'fa-users',
-    presentation: 'fa-presentation-screen',
-    'shield-check': 'fa-shield-halved',
-    'arrow-right': 'fa-arrow-right'
-  };
+  eleventyConfig.addFilter('faIcon', faIcon);
 
-  eleventyConfig.addFilter('faIcon', function (name) {
-    return faIcons[name] || 'fa-circle';
-  });
-
-  eleventyConfig.addFilter('i18n', function (key, locale) {
-    const data = locale === 'en' ? en : pt;
-    return key.split('.').reduce((obj, k) => obj?.[k], data) ?? key;
-  });
+  eleventyConfig.addFilter('i18n', i18n);
 
   return {
     markdownTemplateEngine: 'njk',
