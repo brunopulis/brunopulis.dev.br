@@ -1,12 +1,12 @@
-{% macro serviceCard(service, locale) %}
+{% macro serviceCard(service, locale, heading = 'h3') %}
 <article class="card service-card">
   <div class="service-card__body flow">
     <p class="service-card__icon">
       <i class="fa-solid {{ service.icon | faIcon }}" aria-hidden="true"></i>
     </p>
-    <h3 class="service-card__title">
+    <{{ heading }} class="service-card__title">
       <a href="{{ service.url }}">{{ service.title }}</a>
-    </h3>
+    </{{ heading }}>
     <p class="service-card__text">{{ service.description }}</p>
   </div>
 </article>

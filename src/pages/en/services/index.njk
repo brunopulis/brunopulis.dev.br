@@ -20,7 +20,7 @@ description: 'I help organizations make their websites and digital services acce
     </div>
     <div class="grid">
       {% for service in 'services' | i18n(locale) %}
-        {{ serviceCard(service, locale) }}
+        {{ serviceCard(service, locale, 'h2') }}
       {% endfor %}
     </div>
   </div>
