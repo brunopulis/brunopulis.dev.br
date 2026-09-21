@@ -77,8 +77,9 @@ function startServer() {
   });
 }
 
-function run(cmd, nodeArgs) {
-  const res = spawnSync(process.execPath, [cmd, ...nodeArgs], {
+function run(cmd, nodeArgs, direct = false) {
+  const argv = direct ? [cmd, ...nodeArgs] : [process.execPath, cmd, ...nodeArgs];
+  const res = spawnSync(argv[0], argv.slice(1), {
     stdio: 'inherit'
   });
   if (res.status !== 0) {
@@ -88,7 +89,7 @@ function run(cmd, nodeArgs) {
 
 async function main() {
   run('scripts/copy-fonts.js', []);
-  run('node_modules/.bin/eleventy', []);
+  run('node_modules/.bin/eleventy', [], true);
 
   const server = await startServer();
 
@@ -96,7 +97,7 @@ async function main() {
   if (spec) cypressArgs.push('--spec', spec);
   cypressArgs.push('--config', `baseUrl=http://localhost:${PORT}`);
 
-  const child = spawn(process.execPath, cypressArgs, {
+  const child = spawn(cypressArgs[0], cypressArgs.slice(1), {
     stdio: 'inherit',
     env: { ...process.env, CYPRESS_BASE_URL: `http://localhost:${PORT}` }
   });
